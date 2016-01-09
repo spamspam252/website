@@ -25,6 +25,8 @@ p {
 * {
   padding: 0;
   margin: 0; }
+  *:focus {
+    outline: none; }
 
 .line {
   width: 100%;
@@ -99,6 +101,8 @@ p {
 * {
   padding: 0;
   margin: 0; }
+  *:focus {
+    outline: none; }
 
 .line {
   width: 100%;
@@ -118,6 +122,100 @@ p {
   margin: 0 auto;
   top: -1px; }
 
+@font-face {
+  font-family: 'Hero';
+  /*a name to be used later*/
+  src: url("../font/Hero.ttf");
+  /*URL to font*/ }
+h1,
+h2 {
+  font-family: 'Hero';
+  font-size: 20pt;
+  text-align: center; }
+
+p {
+  font-family: 'Hero';
+  text-align: justify;
+  line-height: 150%;
+  width: 100%;
+  margin: 15px 0; }
+
+* {
+  padding: 0;
+  margin: 0; }
+  *:focus {
+    outline: none; }
+
+.line {
+  width: 100%;
+  height: 2px;
+  background-image: url("../img/line.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 110%;
+  position: relative; }
+
+.round {
+  background-color: #1C1D21;
+  border-radius: 100%;
+  height: 4px;
+  width: 4px;
+  position: relative;
+  margin: 0 auto;
+  top: -1px; }
+
+* {
+  font-family: 'Hero'; }
+
+.button {
+  outline: none;
+  height: 40px;
+  text-align: center;
+  width: 130px;
+  border-radius: 2px;
+  background: #fff;
+  border: 1px solid #445878;
+  color: #445878;
+  letter-spacing: 1px;
+  text-shadow: 0;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.25s ease; }
+  .button:hover {
+    color: white;
+    background: #445878; }
+  .button:active {
+    letter-spacing: 2px; }
+  .button:after {
+    content: "SUBMIT"; }
+
+.onclic {
+  width: 40px;
+  border-color: #bbbbbb;
+  border-width: 3px;
+  font-size: 0;
+  border-color: #445878;
+  animation: rotating 2s 0.25s linear infinite; }
+  .onclic:after {
+    content: ""; }
+  .onclic:hover {
+    color: #445878;
+    background: white; }
+
+.validate {
+  font-size: 13px;
+  color: white;
+  background: #445878; }
+  .validate:after {
+    font-family: 'FontAwesome';
+    content: "\f00c"; }
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
 body {
   background-color: #EEEFF7; }
   body #container {
@@ -172,3 +270,36 @@ body {
         height: 100%;
         display: inline-block;
         margin-top: 35px; }
+    body #container #contactContent {
+      max-width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 15px; }
+      body #container #contactContent::after {
+        clear: both;
+        content: "";
+        display: table; }
+      body #container #contactContent #formContact label {
+        font-family: 'Hero'; }
+      body #container #contactContent #formContact input[type="text"],
+      body #container #contactContent #formContact input[type="email"],
+      body #container #contactContent #formContact textarea {
+        font-family: 'Hero';
+        padding: 12px;
+        box-sizing: border-box;
+        display: block;
+        border-radius: 2px;
+        border: solid 1px #445878;
+        width: 100%;
+        background: #ECECF5;
+        font-size: 12pt;
+        margin-bottom: 20px;
+        margin-top: 5px; }
+      body #container #contactContent #formContact input[type="text"]:focus,
+      body #container #contactContent #formContact input[type="email"]:focus {
+        background: #F1F1FA; }
+    body #container footer {
+      margin: 20px 0;
+      text-align: right; }
+      body #container footer small span {
+        font-family: helvetica; }
