@@ -1,0 +1,45 @@
+@import "Global";
+
+
+#FixedMenu {
+    height: 110px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    box-shadow: 0px 3px 11px -1px rgba(117, 117, 117, 1);
+    background-color: $white;
+    z-index: 5;
+    #logo {
+        background-image: url("../img/test5.gif");
+        background-size: 100%;
+        background-repeat: no-repeat;
+        margin: 0 auto;
+        width: 80px;
+        height: 97px;
+        position: relative;
+        top: 2px;
+    }
+    .line {
+        // @include test;
+        width: 960px;
+        margin: 0 auto;
+        top: -25px;
+    }
+    #navigation {
+        ul {
+            text-align: center;
+            li {
+                display: inline-block;
+                margin: 0 70px;
+                a {
+                    text-decoration: none;
+                    font-family: 'Hero';
+                    color: $gray;
+                    position: relative;
+                    top: -17px;
+                    font-size: 13pt;
+                }
+            }
+        }
+    }
+}
