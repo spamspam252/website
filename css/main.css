@@ -298,8 +298,50 @@ body {
       body #container #contactContent #formContact input[type="text"]:focus,
       body #container #contactContent #formContact input[type="email"]:focus {
         background: #F1F1FA; }
-    body #container footer {
-      margin: 20px 0;
-      text-align: right; }
-      body #container footer small span {
-        font-family: helvetica; }
+    body #container footer form {
+      margin: 20px 0; }
+      body #container footer form input[type="email"] {
+        font-family: 'Hero';
+        padding: 12px;
+        box-sizing: border-box;
+        display: block;
+        border-radius: 2px;
+        border: solid 1px #445878;
+        width: 100%;
+        background: #ECECF5;
+        font-size: 12pt;
+        margin-bottom: 20px;
+        margin-top: 5px;
+        display: inline-block;
+        width: 80%;
+        padding: 8.5px;
+        margin-bottom: 15px; }
+        body #container footer form input[type="email"]:focus {
+          background: #F1F1FA; }
+    body #container footer #footerContent {
+      width: 100%;
+      height: 100%; }
+      body #container footer #footerContent small {
+        float: right;
+        margin-top: 7px; }
+        body #container footer #footerContent small span {
+          font-family: helvetica; }
+      body #container footer #footerContent .SocialIcon {
+        width: 100%;
+        height: 30px; }
+        body #container footer #footerContent .SocialIcon ul li {
+          margin: 0 15px 0 0;
+          width: 30px;
+          height: 30px;
+          display: inline-block;
+          background-size: 100%; }
+        body #container footer #footerContent .SocialIcon ul a {
+          display: inline-block;
+          width: 30px;
+          height: 30px; }
+        body #container footer #footerContent .SocialIcon ul #facebook {
+          background-image: url("../img/Facebook.png"); }
+        body #container footer #footerContent .SocialIcon ul #github {
+          background-image: url("../img/Github.png"); }
+        body #container footer #footerContent .SocialIcon ul #linkedin {
+          background-image: url("../img/LinkedIn.png"); }

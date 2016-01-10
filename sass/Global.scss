@@ -1,4 +1,3 @@
-
 @mixin test($color:red) {
     border: solid 1px $color;
 }
@@ -9,6 +8,20 @@
     height: 200px;
     display: inline-block;
     //4px margin bottom
+}
+
+@mixin textBlock {
+    font-family: 'Hero';
+    padding: 12px;
+    box-sizing: border-box;
+    display: block;
+    border-radius: 2px;
+    border: solid 1px $dark-blue;
+    width: 100%;
+    background: #ECECF5;
+    font-size: 12pt;
+    margin-bottom: 20px;
+    margin-top: 5px;
 }
 
 @font-face {
@@ -41,7 +54,7 @@ $black: #1C1D21;
 * {
     padding: 0;
     margin: 0;
-    &:focus{
+    &:focus {
         outline: none;
     }
 }

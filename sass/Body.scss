@@ -24,12 +24,9 @@ body {
             // @include test;
             margin: 100px auto;
         }
-        
         #aboutContent {
             // @include test;
         }
-        
-
         #portfolioContent {
             text-align: center;
             .PortfolioLogo {
@@ -38,8 +35,6 @@ body {
                 margin-bottom: 11px;
             }
         }
-
-
         #blogContent {
             .Article {
                 // @include test(blue);
@@ -68,7 +63,6 @@ body {
                 }
             }
         } // END BLOG CONTENT
-
         #contactContent {
             @include outer-container(100%);
             margin-bottom: 15px;
@@ -79,17 +73,7 @@ body {
                 input[type="text"],
                 input[type="email"],
                 textarea {
-                    font-family: 'Hero';
-                    padding: 12px;
-                    box-sizing: border-box;
-                    display: block;
-                    border-radius: 2px;
-                    border: solid 1px $dark-blue;
-                    width: 100%;
-                    background: #ECECF5;
-                    font-size: 12pt;
-                    margin-bottom: 20px;
-                    margin-top: 5px;
+                    @include textBlock;
                 }
                 input[type="text"],
                 input[type="email"] {
@@ -99,14 +83,65 @@ body {
                 }
             }
         }
-        footer{
-        		margin: 20px 0;
-        		text-align: right;
-        	small{
-				span{
-					font-family: helvetica;
-				}
-        	}
+        footer {
+            form {
+                margin: 20px 0;
+                input[type="email"] {
+                    @include textBlock;
+                    display: inline-block;
+                    width: 80%;
+                    padding: 8.5px;
+                    // margin-top: 4px;
+                    margin-bottom: 15px;
+                    &:focus {
+                        background: #F1F1FA;
+                    }
+                }
+                .button {}
+            }
+            #footerContent {
+                // @include test(green);
+                width: 100%;
+                height: 100%;
+                small {
+                    float: right;
+                    margin-top: 7px;
+                    span {
+                        font-family: helvetica;
+                    }
+                }
+                .SocialIcon {
+                    // @include test;
+                    width: 100%;
+                    height: 30px;
+                    // float: left;
+                    ul {
+                        li {
+                            // @include test(blue);
+                            margin: 0 15px 0 0;
+                            width: 30px;
+                            height: 30px;
+                            display: inline-block;
+                            background-size: 100%;
+                        }
+                        a{
+                        	// @include test(green);
+                        	display: inline-block;
+                        	width: 30px;
+                        	height: 30px;
+                        }
+                        #facebook{
+                        	background-image: url("../img/Facebook.png");
+                        }
+                        #github{
+                        	background-image:url("../img/Github.png");
+                        }
+                        #linkedin{
+                        	background-image:url("../img/LinkedIn.png");
+                        }
+                    }
+                }
+            } //END FOTTER CONTENT
         }
     } // END CONTAINER
 } // END body
