@@ -167,7 +167,7 @@ p {
 * {
   font-family: 'Hero'; }
 
-.button {
+.submit {
   outline: none;
   height: 40px;
   text-align: center;
@@ -181,13 +181,14 @@ p {
   font-size: 15px;
   font-weight: bold;
   cursor: pointer;
+  -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease; }
-  .button:hover {
+  .submit:hover {
     color: white;
     background: #445878; }
-  .button:active {
+  .submit:active {
     letter-spacing: 2px; }
-  .button:after {
+  .submit:after {
     content: "SUBMIT"; }
 
 .onclic {
@@ -196,7 +197,8 @@ p {
   border-width: 3px;
   font-size: 0;
   border-color: #445878;
-  animation: rotating 2s 0.25s linear infinite; }
+  -webkit-animation: rotating 2s 0.25s linear infinite;
+          animation: rotating 2s 0.25s linear infinite; }
   .onclic:after {
     content: ""; }
   .onclic:hover {
@@ -208,14 +210,24 @@ p {
   color: white;
   background: #445878; }
   .validate:after {
-    font-family: 'FontAwesome';
+    font-family: 'Hero';
     content: "\f00c"; }
+
+@-webkit-keyframes rotating {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
 
 @keyframes rotating {
   from {
-    transform: rotate(0deg); }
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
   to {
-    transform: rotate(360deg); } }
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
 body {
   background-color: #EEEFF7; }
   body #container {
@@ -298,9 +310,9 @@ body {
       body #container #contactContent #formContact input[type="text"]:focus,
       body #container #contactContent #formContact input[type="email"]:focus {
         background: #F1F1FA; }
-    body #container footer form {
-      margin: 20px 0; }
-      body #container footer form input[type="email"] {
+    body #container #newsLetter {
+      display: block; }
+      body #container #newsLetter input[type="email"] {
         font-family: 'Hero';
         padding: 12px;
         box-sizing: border-box;
@@ -316,32 +328,36 @@ body {
         width: 80%;
         padding: 8.5px;
         margin-bottom: 15px; }
-        body #container footer form input[type="email"]:focus {
+        body #container #newsLetter input[type="email"]:focus {
           background: #F1F1FA; }
     body #container footer #footerContent {
+      margin-bottom: 15px;
       width: 100%;
-      height: 100%; }
+      height: 30px; }
       body #container footer #footerContent small {
         float: right;
-        margin-top: 7px; }
-        body #container footer #footerContent small span {
-          font-family: helvetica; }
-      body #container footer #footerContent .SocialIcon {
-        width: 100%;
-        height: 30px; }
-        body #container footer #footerContent .SocialIcon ul li {
-          margin: 0 15px 0 0;
+        margin-top: 5px; }
+        body #container footer #footerContent small #copyright {
+          font-family: Helvetica;
+          font-size: 12pt;
+          vertical-align: -2px; }
+      body #container footer #footerContent ul {
+        float: left; }
+        body #container footer #footerContent ul li {
           width: 30px;
           height: 30px;
           display: inline-block;
+          margin-right: 15px; }
+          body #container footer #footerContent ul li a {
+            display: inline-block;
+            width: 100%;
+            height: 100%; }
+        body #container footer #footerContent ul #facebook {
+          background-image: url("../img/Facebook.png");
           background-size: 100%; }
-        body #container footer #footerContent .SocialIcon ul a {
-          display: inline-block;
-          width: 30px;
-          height: 30px; }
-        body #container footer #footerContent .SocialIcon ul #facebook {
-          background-image: url("../img/Facebook.png"); }
-        body #container footer #footerContent .SocialIcon ul #github {
-          background-image: url("../img/Github.png"); }
-        body #container footer #footerContent .SocialIcon ul #linkedin {
-          background-image: url("../img/LinkedIn.png"); }
+        body #container footer #footerContent ul #github {
+          background-image: url("../img/Github.png");
+          background-size: 100%; }
+        body #container footer #footerContent ul #linkedin {
+          background-image: url("../img/LinkedIn.png");
+          background-size: 100%; }

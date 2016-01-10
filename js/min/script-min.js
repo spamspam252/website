@@ -1,0 +1,1 @@
+$(function(){function i(){setTimeout(function(){$(".submit").removeClass("onclic"),$(".submit").addClass("validate",450,t)},2250)}function t(){setTimeout(function(){$(".submit").removeClass("validate")},1250)}$(".submit").click(function(){$(".submit").addClass("onclic",250,i)})});

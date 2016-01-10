@@ -1,5 +1,10 @@
 @import "Global";
 @import "button";
+@mixin setIconBackground($src) {
+    background-image: url("$src");
+    background-size: 100%;
+}
+
 body {
     background-color: $white;
     #container {
@@ -83,65 +88,65 @@ body {
                 }
             }
         }
-        footer {
-            form {
-                margin: 20px 0;
-                input[type="email"] {
-                    @include textBlock;
-                    display: inline-block;
-                    width: 80%;
-                    padding: 8.5px;
-                    // margin-top: 4px;
-                    margin-bottom: 15px;
-                    &:focus {
-                        background: #F1F1FA;
-                    }
+        #newsLetter {
+            // @include test;
+            display: block;
+            // margin: 20px 0;
+            input[type="email"] {
+                @include textBlock;
+                display: inline-block;
+                width: 80%;
+                padding: 8.5px;
+                // margin-top: 4px;
+                margin-bottom: 15px;
+                &:focus {
+                    background: #F1F1FA;
                 }
-                .button {}
             }
+        }
+        footer {
             #footerContent {
                 // @include test(green);
+                margin-bottom: 15px;
                 width: 100%;
-                height: 100%;
+                height: 30px;
                 small {
                     float: right;
-                    margin-top: 7px;
-                    span {
-                        font-family: helvetica;
+                    margin-top: 5px;
+                    #copyright {
+                        font-family: Helvetica;
+                        font-size: 12pt;
+                        vertical-align: -2px;
                     }
                 }
-                .SocialIcon {
-                    // @include test;
-                    width: 100%;
-                    height: 30px;
-                    // float: left;
-                    ul {
-                        li {
-                            // @include test(blue);
-                            margin: 0 15px 0 0;
-                            width: 30px;
-                            height: 30px;
+                ul {
+                    float: left;
+                    li {
+                        width: 30px;
+                        height: 30px;
+                        display: inline-block;
+                        margin-right: 15px;
+                        a {
+                            // @include test(black);
                             display: inline-block;
-                            background-size: 100%;
-                        }
-                        a{
-                        	// @include test(green);
-                        	display: inline-block;
-                        	width: 30px;
-                        	height: 30px;
-                        }
-                        #facebook{
-                        	background-image: url("../img/Facebook.png");
-                        }
-                        #github{
-                        	background-image:url("../img/Github.png");
-                        }
-                        #linkedin{
-                        	background-image:url("../img/LinkedIn.png");
+                            width: 100%;
+                            height: 100%;
                         }
                     }
+                    #facebook {
+                        background-image: url("../img/Facebook.png");
+                        background-size:100%;
+                    }
+                    #github{
+                        background-image: url("../img/Github.png");
+                        background-size:100%;
+                    }
+                    #linkedin{
+                        background-image: url("../img/LinkedIn.png");
+                        background-size:100%;
+                    }
                 }
-            } //END FOTTER CONTENT
-        }
+            }
+        } //END FOOTER
     } // END CONTAINER
 } // END body
