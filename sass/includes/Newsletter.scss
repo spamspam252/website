@@ -1,0 +1,34 @@
+ #newsLetter {
+     // @include test;
+     display: block;
+     // margin: 20px 0;
+     // margin-bottom: 20px;
+     input[type="email"],
+     label,
+     button{
+        float: left;
+        margin-right: 10px;
+     }
+      
+      button{
+        margin-top: 4.5px;
+        margin-right: 0;
+        margin-left: 5px;
+      }  
+
+     input[type="email"] {
+         // @include test;
+         // margin-bottom: 50px;
+         @include textBlock;
+         display: inline-block;
+         width: 79%;
+         padding: 8.5px;
+         height: 40px;
+         &:focus {
+             background: #F1F1FA;
+         }
+     }
+     label{
+        margin-top: 12px;
+     }
+ }

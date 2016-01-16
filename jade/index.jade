@@ -1,0 +1,56 @@
+include includes/global.jade
+
+//- ----------------
+doctype html
+html
+	head
+		meta(charset="UTF-8")
+		title Vu Nguyen Hung
+		link(rel="stylesheet", href="../css/main.css")/
+		link(rel="icon", href="../img/chuki.png", type="image/x-icon")
+			
+	body
+		include includes/FixedMenu.jade
+		
+		#container
+
+			include includes/Gallery.jade
+			//- END GALLERY
+
+
+			include includes/About.jade
+			//- END ABOUT SECTION
+
+
+			include includes/Portfolio.jade
+			//- END PORTFOLIO SECTION
+			
+
+			include includes/Blog.jade
+			//- END BLOG CONTENT
+
+
+			include includes/Contact.jade
+			//- END CONTACT SECTION
+			
+
+			include includes/Newsletter.jade
+			//- END NEWSLETTER SECTION
+
+
+			include includes/Footer.jade
+			//- END FOOTER CONTENT
+		//- END CONTAINER
+		//- jQuery
+		script(src='http://code.jquery.com/jquery-2.2.0.min.js' language="javascript" type ="text/javascript")
+		//- jQuery UI
+		script(src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js')
+		//- JS
+		script(src='../js/script.js' type ='text/javascript')
+		
+
+
+	
+
+
+		

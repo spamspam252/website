@@ -1,0 +1,14 @@
+section#contact
+	+sectionHeader("Contact")
+	+line
+	#contactContent
+		p Looking for a project of another type? Send me a little information about what you're looking for and I'll be in touch!
+		form#formContact
+			label(for="formName") Name: *
+			input(type="text")#formName
+			label(for="formEmail") Email: *
+			input(type="email")#formEmail
+			label(for="formMessage") Message: *
+			textarea#formMessage(name="", cols="30", rows="10")
+			button#submitMessage(type="button")
+	+line

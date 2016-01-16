@@ -1,0 +1,8 @@
+#portfolioContent {
+    text-align: center;
+    .PortfolioLogo {
+        @include ImageBlock;
+        margin: 15px 50px;
+        margin-bottom: 11px;
+    }
+}

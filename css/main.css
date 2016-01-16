@@ -1,3 +1,4 @@
+@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css";
 html {
   box-sizing: border-box; }
 
@@ -45,6 +46,9 @@ p {
   position: relative;
   margin: 0 auto;
   top: -1px; }
+
+.sectionHeader {
+  margin: 100px auto; }
 
 #FixedMenu {
   height: 110px;
@@ -122,6 +126,16 @@ p {
   margin: 0 auto;
   top: -1px; }
 
+.sectionHeader {
+  margin: 100px auto; }
+
+#gallery {
+  width: 100%;
+  position: relative; }
+  #gallery img {
+    width: 100%;
+    height: 100%; }
+
 @font-face {
   font-family: 'Hero';
   /*a name to be used later*/
@@ -164,10 +178,14 @@ p {
   margin: 0 auto;
   top: -1px; }
 
+.sectionHeader {
+  margin: 100px auto; }
+
 * {
   font-family: 'Hero'; }
 
-.submit {
+button {
+  margin-bottom: 5px;
   outline: none;
   height: 40px;
   text-align: center;
@@ -183,12 +201,12 @@ p {
   cursor: pointer;
   -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease; }
-  .submit:hover {
+  button:hover {
     color: white;
     background: #445878; }
-  .submit:active {
+  button:active {
     letter-spacing: 2px; }
-  .submit:after {
+  button:after {
     content: "SUBMIT"; }
 
 .onclic {
@@ -210,7 +228,7 @@ p {
   color: white;
   background: #445878; }
   .validate:after {
-    font-family: 'Hero';
+    font-family: 'FontAwesome';
     content: "\f00c"; }
 
 @-webkit-keyframes rotating {
@@ -228,136 +246,145 @@ p {
   to {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg); } }
-body {
-  background-color: #EEEFF7; }
-  body #container {
-    background-color: #EEEFF7;
-    position: relative;
-    top: 112px;
-    width: 960px;
+#portfolioContent {
+  text-align: center; }
+  #portfolioContent .PortfolioLogo {
+    border: solid 1px red;
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    margin: 15px 50px;
+    margin-bottom: 11px; }
+
+#blogContent .Article {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto; }
+  #blogContent .Article::after {
+    clear: both;
+    content: "";
+    display: table; }
+  #blogContent .Article h2 {
+    font-size: 15pt;
+    text-align: left; }
+  #blogContent .Article small {
+    color: #9197a3;
+    font-family: 'Hero'; }
+  #blogContent .Article .BlogImage {
+    border: solid 1px red;
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    float: left;
+    margin: 15px 15px 11px 0; }
+  #blogContent .Article .ArticleText {
+    float: right;
+    width: 75%;
     height: 100%;
-    margin: 0 auto;
-    z-index: 1; }
-    body #container #gallery {
-      width: 100%;
-      position: relative; }
-      body #container #gallery img {
+    display: inline-block;
+    margin-top: 35px; }
+
+#contactContent {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15px; }
+  #contactContent::after {
+    clear: both;
+    content: "";
+    display: table; }
+  #contactContent #formContact label {
+    font-family: 'Hero'; }
+  #contactContent #formContact input[type="text"],
+  #contactContent #formContact input[type="email"],
+  #contactContent #formContact textarea {
+    font-family: 'Hero';
+    padding: 12px;
+    box-sizing: border-box;
+    display: block;
+    border-radius: 2px;
+    border: solid 1px #445878;
+    width: 100%;
+    background: #ECECF5;
+    font-size: 12pt;
+    margin-bottom: 20px;
+    margin-top: 5px; }
+  #contactContent #formContact input[type="text"]:focus,
+  #contactContent #formContact input[type="email"]:focus {
+    background: #F1F1FA; }
+
+#newsLetter {
+  display: block; }
+  #newsLetter input[type="email"],
+  #newsLetter label,
+  #newsLetter button {
+    float: left;
+    margin-right: 10px; }
+  #newsLetter button {
+    margin-top: 4.5px;
+    margin-right: 0;
+    margin-left: 5px; }
+  #newsLetter input[type="email"] {
+    font-family: 'Hero';
+    padding: 12px;
+    box-sizing: border-box;
+    display: block;
+    border-radius: 2px;
+    border: solid 1px #445878;
+    width: 100%;
+    background: #ECECF5;
+    font-size: 12pt;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    display: inline-block;
+    width: 79%;
+    padding: 8.5px;
+    height: 40px; }
+    #newsLetter input[type="email"]:focus {
+      background: #F1F1FA; }
+  #newsLetter label {
+    margin-top: 12px; }
+
+footer #footerContent {
+  margin-bottom: 15px;
+  width: 100%;
+  height: 30px; }
+  footer #footerContent small {
+    float: right;
+    margin-top: 5px; }
+    footer #footerContent small #copyright {
+      font-family: Helvetica;
+      font-size: 12pt;
+      vertical-align: -2px; }
+  footer #footerContent ul {
+    float: left; }
+    footer #footerContent ul li {
+      width: 30px;
+      height: 30px;
+      display: inline-block;
+      margin-right: 15px; }
+      footer #footerContent ul li a {
+        display: inline-block;
         width: 100%;
         height: 100%; }
-    body #container .sectionHeader {
-      margin: 100px auto; }
-    body #container #portfolioContent {
-      text-align: center; }
-      body #container #portfolioContent .PortfolioLogo {
-        border: solid 1px red;
-        width: 200px;
-        height: 200px;
-        display: inline-block;
-        margin: 15px 50px;
-        margin-bottom: 11px; }
-    body #container #blogContent .Article {
-      max-width: 100%;
-      margin-left: auto;
-      margin-right: auto; }
-      body #container #blogContent .Article::after {
-        clear: both;
-        content: "";
-        display: table; }
-      body #container #blogContent .Article h2 {
-        font-size: 15pt;
-        text-align: left; }
-      body #container #blogContent .Article small {
-        color: #9197a3;
-        font-family: 'Hero'; }
-      body #container #blogContent .Article .BlogImage {
-        border: solid 1px red;
-        width: 200px;
-        height: 200px;
-        display: inline-block;
-        float: left;
-        margin: 15px 15px 11px 0; }
-      body #container #blogContent .Article .ArticleText {
-        float: right;
-        width: 75%;
-        height: 100%;
-        display: inline-block;
-        margin-top: 35px; }
-    body #container #contactContent {
-      max-width: 100%;
-      margin-left: auto;
-      margin-right: auto;
-      margin-bottom: 15px; }
-      body #container #contactContent::after {
-        clear: both;
-        content: "";
-        display: table; }
-      body #container #contactContent #formContact label {
-        font-family: 'Hero'; }
-      body #container #contactContent #formContact input[type="text"],
-      body #container #contactContent #formContact input[type="email"],
-      body #container #contactContent #formContact textarea {
-        font-family: 'Hero';
-        padding: 12px;
-        box-sizing: border-box;
-        display: block;
-        border-radius: 2px;
-        border: solid 1px #445878;
-        width: 100%;
-        background: #ECECF5;
-        font-size: 12pt;
-        margin-bottom: 20px;
-        margin-top: 5px; }
-      body #container #contactContent #formContact input[type="text"]:focus,
-      body #container #contactContent #formContact input[type="email"]:focus {
-        background: #F1F1FA; }
-    body #container #newsLetter {
-      display: block; }
-      body #container #newsLetter input[type="email"] {
-        font-family: 'Hero';
-        padding: 12px;
-        box-sizing: border-box;
-        display: block;
-        border-radius: 2px;
-        border: solid 1px #445878;
-        width: 100%;
-        background: #ECECF5;
-        font-size: 12pt;
-        margin-bottom: 20px;
-        margin-top: 5px;
-        display: inline-block;
-        width: 80%;
-        padding: 8.5px;
-        margin-bottom: 15px; }
-        body #container #newsLetter input[type="email"]:focus {
-          background: #F1F1FA; }
-    body #container footer #footerContent {
-      margin-bottom: 15px;
-      width: 100%;
-      height: 30px; }
-      body #container footer #footerContent small {
-        float: right;
-        margin-top: 5px; }
-        body #container footer #footerContent small #copyright {
-          font-family: Helvetica;
-          font-size: 12pt;
-          vertical-align: -2px; }
-      body #container footer #footerContent ul {
-        float: left; }
-        body #container footer #footerContent ul li {
-          width: 30px;
-          height: 30px;
-          display: inline-block;
-          margin-right: 15px; }
-          body #container footer #footerContent ul li a {
-            display: inline-block;
-            width: 100%;
-            height: 100%; }
-        body #container footer #footerContent ul #facebook {
-          background-image: url("../img/Facebook.png");
-          background-size: 100%; }
-        body #container footer #footerContent ul #github {
-          background-image: url("../img/Github.png");
-          background-size: 100%; }
-        body #container footer #footerContent ul #linkedin {
-          background-image: url("../img/LinkedIn.png");
-          background-size: 100%; }
+    footer #footerContent ul #facebook {
+      background-image: url("../img/Facebook.png");
+      background-size: 100%; }
+    footer #footerContent ul #github {
+      background-image: url("../img/Github.png");
+      background-size: 100%; }
+    footer #footerContent ul #linkedin {
+      background-image: url("../img/LinkedIn.png");
+      background-size: 100%; }
+
+#container {
+  background-color: #EEEFF7;
+  position: relative;
+  top: 112px;
+  width: 960px;
+  height: 100%;
+  margin: 0 auto;
+  z-index: 1; }
+
+body {
+  background-color: #EEEFF7; }

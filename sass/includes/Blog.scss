@@ -1,0 +1,28 @@
+ #blogContent {
+     .Article {
+         // @include test(blue);
+         @include outer-container(100%);
+         // margin: 20px;
+         h2 {
+             font-size: 15pt;
+             text-align: left;
+         }
+         small {
+             color: #9197a3;
+             font-family: 'Hero';
+         }
+         .BlogImage {
+             @include ImageBlock;
+             float: left;
+             margin: 15px 15px 11px 0;
+         }
+         .ArticleText {
+             float: right;
+             width: 75%;
+             height: 100%;
+             display: inline-block;
+             // vertical-align: middle;
+             margin-top: 35px;
+         }
+     }
+ } // END BLOG CONTENT

@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"bac",
+				"background-image"
+			],
+			[
 				"bgi",
 				"background-image"
 			],
@@ -30,10 +34,6 @@
 			[
 				"font",
 				"font-family"
-			],
-			[
-				"bac",
-				"background-color"
 			],
 			[
 				"text",
@@ -144,6 +144,14 @@
 				"Git: Push"
 			],
 			[
+				"git commit",
+				"Git: Quick Commit"
+			],
+			[
+				"git ad",
+				"Git: Add All"
+			],
+			[
 				"gitcom",
 				"Git: Quick Commit"
 			],
@@ -165,10 +173,6 @@
 			],
 			[
 				"git add",
-				"Git: Add All"
-			],
-			[
-				"git ad",
 				"Git: Add All"
 			],
 			[
@@ -208,7 +212,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 299.0
+		"width": 353.0
 	},
 	"console":
 	{
@@ -230,13 +234,16 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/vunguyenhung/Public/OneDrive/WebProject/MyWebsite/html/website/css",
-		"/Users/vunguyenhung/Public/OneDrive/WebProject/MyWebsite/html/website/html",
-		"/Users/vunguyenhung/Public/OneDrive/WebProject/MyWebsite/html/website/sass",
-		"/Users/vunguyenhung/Public/OneDrive/WebProject/MyWebsite/html/website/sass/.sass-cache"
+		"/Users/vunguyenhung/Public/OneDrive/WebProject/MyWebsite/website",
+		"/Users/vunguyenhung/Public/OneDrive/WebProject/MyWebsite/website/js"
 	],
 	"file_history":
 	[
+		"/Users/vunguyenhung/Public/OneDrive/WebProject/MyWebsite/html/js/tipCal.html",
+		"/Users/vunguyenhung/Public/OneDrive/WebProject/MyWebsite/website/sass/button.scss",
+		"/Users/vunguyenhung/Public/OneDrive/WebProject/MyWebsite/website/sass/Body.scss",
+		"/Users/vunguyenhung/Public/OneDrive/WebProject/MyWebsite/website/html/index.html",
+		"/Users/vunguyenhung/Public/OneDrive/WebProject/MyWebsite/website/js/script.js",
 		"/Users/vunguyenhung/Public/OneDrive/WebProject/MyWebsite/html/website/sass/FixedMenu.scss",
 		"/Users/vunguyenhung/Public/OneDrive/WebProject/MyWebsite/html/website/sass/Global.scss",
 		"/Users/vunguyenhung/Public/OneDrive/WebProject/MyWebsite/html/website/html/index.html",
@@ -310,6 +317,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"#button",
+			"button",
 			"333",
 			"rgba(51, 3, NaN, 1);",
 			"border:",
@@ -472,7 +481,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 1,
+	"selected_group": 0,
 	"settings":
 	{
 	},
