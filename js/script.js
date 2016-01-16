@@ -1,4 +1,34 @@
 $(function() {
+
+    $('#name').hide();
+    var lastScrollTop = 0;
+    $(window).scroll(function(event) {
+        var st = $(this).scrollTop();
+        if (st > lastScrollTop) {
+            // downscroll code
+            // console.log("down");
+            // $('#logo').slideUp('fast');
+            // $('#name').slideDown('fast');
+            // $('#FixedMenu').css({
+            //     height: '90px'
+            // });
+
+        } else {
+            // upscroll code
+            if (st === 0) {
+                // $('#logo').slideDown('fast');
+                // $('#name').slideUp('fast').fadeOut('fast', function() {
+
+                // });;
+                // $('#FixedMenu').css({
+                //     height: '110px'
+                // });
+            }
+        }
+        lastScrollTop = st;
+    });
+
+
     $("#submitMessage").click(function() {
         $("#submitMessage").addClass("onclic", 250, validate);
     });
