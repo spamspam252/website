@@ -1,0 +1,76 @@
+@import "Global";
+@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css";
+
+$green: #1ECD97;
+$gray: #bbbbbb;
+* {
+    font-family: 'Hero';
+}
+
+button {
+    // margin-top: 15px;
+    margin-bottom: 5px;
+    outline: none;
+    height: 40px;
+    text-align: center;
+    width: 130px;
+    border-radius: 2px;
+    background: #fff;
+    border: 1px solid $dark-blue;
+    color: $dark-blue;
+    letter-spacing: 1px;
+    text-shadow: 0;
+    font: {
+        size: 15px;
+        weight: bold;
+    }
+    cursor: pointer;
+    transition: all 0.25s ease;
+    &:hover {
+        color: white;
+        background: $dark-blue;
+    }
+    &:active {
+        //letter-spacing: 2px;
+        letter-spacing: 2px;
+    }
+    &:after {
+        content: "SUBMIT";
+    }
+}
+
+.onclic {
+    width: 40px;
+    border-color: $gray;
+    border-width: 3px;
+    font-size: 0;
+    border-color: $dark-blue;
+    animation: rotating 2s 0.25s linear infinite;
+    &:after {
+        content: "";
+    }
+    &:hover {
+        color: $dark-blue;
+        background: white;
+    }
+}
+
+.validate {
+    font-size: 13px;
+    color: white;
+    background: $dark-blue;
+    &:after {
+        font-family: 'FontAwesome';
+        content: "\f00c";
+    }
+}
+@keyframes rotating {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
