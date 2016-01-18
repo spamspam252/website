@@ -11,7 +11,7 @@
      }
       
       button{
-        margin-top: 4.5px;
+        margin-top: 2.3px;
         margin-right: 0;
         margin-left: 5px;
       }  
@@ -20,6 +20,7 @@
          // @include test;
          // margin-bottom: 50px;
          @include textBlock;
+         margin-top: 1.5px;
          display: inline-block;
          width: 79%;
          padding: 8.5px;

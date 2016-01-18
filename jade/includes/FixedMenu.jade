@@ -1,9 +1,11 @@
-header#FixedMenu
-			#logo
-			p#name Vũ Nguyên Hưng
-			+line
-			nav#navigation
-				ul
-					each val in ["About", "Portlofio", "Blog", "Contact"]
-						li 
-							a !{val}
+//- header.menuExpand
+//- header.menuCollapse
+header(id="FixedMenu")
+	#logoContent
+		img(src="img/test5.gif", alt="Nope")#logo
+		p#name Vũ Nguyên Hưng
+	nav#navigation
+		+line
+		ul
+			each val in ["About", "Portfolio", "Blog", "Contact"]
+				li(id= val) !{val}
