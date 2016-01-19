@@ -65,6 +65,12 @@ $black: #1C1D21;
     }
 }
 
+a {
+    color: $gray;
+    text-decoration: none;
+    position: relative;
+}
+
 .line {
     // @include test;
     width: 100%;
@@ -91,4 +97,8 @@ $black: #1C1D21;
     // @include test;
     // font-family: 'Hero';
     margin: 100px auto;
+}
+
+.active {
+    font-size: 15pt;
 }

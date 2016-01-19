@@ -7,13 +7,14 @@ header(id="FixedMenu")
 	nav#navigation
 		+line
 		ul
-			each val in ["About", "Portfolio", "Blog", "Contact"]
-				li(id= val+"Nav") !{val}
-			//- li#aboutNav
-			//- 	a(href="#About") About
-			//- li#portfolioNav
-			//- 	a(href="#Portfolio") Portfolio
-			//- li#blogNav
-			//- 	a(href="#Blog") Blog
-			//- li#contactNav
-			//- 	a(href="#Contact") Contact
+			li#aboutNav
+				a(href="#About") About
+			li#portfolioNav
+				a(href="#Portfolio") Portfolio
+			li#blogNav
+				a(href="#Blog") Blog
+			li#contactNav
+				a(href="#Contact") Contact
+
+			//- each val in ["About", "Portfolio", "Blog", "Contact"]
+			//- 	li(id= val+"Nav") !{val}

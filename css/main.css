@@ -28,6 +28,11 @@ p {
   *:focus {
     outline: none; }
 
+a {
+  color: #31353D;
+  text-decoration: none;
+  position: relative; }
+
 .line {
   width: 100%;
   height: 2px;
@@ -49,6 +54,9 @@ p {
 .sectionHeader {
   margin: 100px auto; }
 
+.active {
+  font-size: 15pt; }
+
 #navigation {
   position: relative;
   width: 100%;
@@ -64,11 +72,31 @@ p {
       font-size: 13pt;
       -webkit-transition: all 0.25s ease;
       transition: all 0.25s ease; }
-      #navigation ul li:hover {
-        cursor: pointer;
-        color: #6B7385;
-        -webkit-transition: all 0.25s ease;
-        transition: all 0.25s ease; }
+      #navigation ul li a {
+        -webkit-transition: all 0.1s ease-in-out 0s;
+        transition: all 0.1s ease-in-out 0s; }
+        #navigation ul li a:hover:before {
+          cursor: pointer;
+          -webkit-transition: all 0.3s ease-in-out 0s;
+          transition: all 0.3s ease-in-out 0s;
+          visibility: visible;
+          -webkit-transform: scaleX(1);
+              -ms-transform: scaleX(1);
+                  transform: scaleX(1); }
+        #navigation ul li a:before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 1px;
+          bottom: 0;
+          left: 0;
+          background-color: #31353D;
+          visibility: hidden;
+          -webkit-transform: scaleX(0);
+              -ms-transform: scaleX(0);
+                  transform: scaleX(0);
+          -webkit-transition: all 0.3s ease-in-out 0s;
+          transition: all 0.3s ease-in-out 0s; }
 
 .navSelected {
   color: #6B7385; }
@@ -158,6 +186,11 @@ p {
   *:focus {
     outline: none; }
 
+a {
+  color: #31353D;
+  text-decoration: none;
+  position: relative; }
+
 .line {
   width: 100%;
   height: 2px;
@@ -178,6 +211,9 @@ p {
 
 .sectionHeader {
   margin: 100px auto; }
+
+.active {
+  font-size: 15pt; }
 
 #gallery {
   width: 100%;
@@ -210,6 +246,11 @@ p {
   *:focus {
     outline: none; }
 
+a {
+  color: #31353D;
+  text-decoration: none;
+  position: relative; }
+
 .line {
   width: 100%;
   height: 2px;
@@ -230,6 +271,9 @@ p {
 
 .sectionHeader {
   margin: 100px auto; }
+
+.active {
+  font-size: 15pt; }
 
 * {
   font-family: 'Hero'; }
@@ -296,9 +340,9 @@ button {
   to {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg); } }
-#portfolio #portfolioContent {
+#portfolioSection #portfolioContent {
   text-align: center; }
-  #portfolio #portfolioContent .PortfolioLogo {
+  #portfolioSection #portfolioContent .PortfolioLogo {
     border: solid 1px red;
     width: 200px;
     height: 200px;
@@ -306,48 +350,48 @@ button {
     margin: 15px 50px;
     margin-bottom: 11px; }
 
-#blog #blogContent .Article {
+#blogSection #blogContent .Article {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto; }
-  #blog #blogContent .Article::after {
+  #blogSection #blogContent .Article::after {
     clear: both;
     content: "";
     display: table; }
-  #blog #blogContent .Article h2 {
+  #blogSection #blogContent .Article h2 {
     font-size: 15pt;
     text-align: left; }
-  #blog #blogContent .Article small {
+  #blogSection #blogContent .Article small {
     color: #9197a3;
     font-family: 'Hero'; }
-  #blog #blogContent .Article .BlogImage {
+  #blogSection #blogContent .Article .BlogImage {
     border: solid 1px red;
     width: 200px;
     height: 200px;
     display: inline-block;
     float: left;
     margin: 15px 15px 11px 0; }
-  #blog #blogContent .Article .ArticleText {
+  #blogSection #blogContent .Article .ArticleText {
     float: right;
     width: 75%;
     height: 100%;
     display: inline-block;
     margin-top: 35px; }
 
-#contact #contactContent {
+#contactSection #contactContent {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 15px; }
-  #contact #contactContent::after {
+  #contactSection #contactContent::after {
     clear: both;
     content: "";
     display: table; }
-  #contact #contactContent #formContact label {
+  #contactSection #contactContent #formContact label {
     font-family: 'Hero'; }
-  #contact #contactContent #formContact input[type="text"],
-  #contact #contactContent #formContact input[type="email"],
-  #contact #contactContent #formContact textarea {
+  #contactSection #contactContent #formContact input[type="text"],
+  #contactSection #contactContent #formContact input[type="email"],
+  #contactSection #contactContent #formContact textarea {
     font-family: 'Hero';
     padding: 12px;
     box-sizing: border-box;
@@ -360,8 +404,8 @@ button {
     margin-bottom: 20px;
     margin-top: 5px;
     resize: none; }
-  #contact #contactContent #formContact input[type="text"]:focus,
-  #contact #contactContent #formContact input[type="email"]:focus {
+  #contactSection #contactContent #formContact input[type="text"]:focus,
+  #contactSection #contactContent #formContact input[type="email"]:focus {
     background: #F1F1FA; }
 
 #newsLetter {

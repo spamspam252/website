@@ -1,18 +1,10 @@
 $(function() {
 
-
     // ------NAVBAR - LOGO CLICK EVENT
-    $('#logo, #name, #AboutNav, #PortfolioNav, #BlogNav, #ContactNav').click(function(event) {
-        if (event.target.id == "logo" || event.target.id == "name")
-            $(window).scrollTo('0%', 500);
-        else if (event.target.id == "AboutNav")
-            $(window).scrollTo($("#startAbout"), 500,{offset:-75});
-        else if (event.target.id == "PortfolioNav")
-            $(window).scrollTo($("#startPortfolio"), 500,{offset:-75});
-        else if (event.target.id == "BlogNav")
-            $(window).scrollTo($("#startBlog"), 500, {offset:-75});
-        else if (event.target.id == "ContactNav")
-            $(window).scrollTo($("#startContact"), 500, {offset:-75});
+    $('#logo, #name').click(function(event) {
+        // if (event.target.id == "logo" || event.target.id == "name")
+        $(window).scrollTo('0%', 500);
+        window.location.hash = "#Home";
     });
     // ------ END NAVBAR - LOGO CLICK EVENT
 
@@ -20,6 +12,67 @@ $(function() {
     // $(window).scrollTo('0%', 500
     // // , {  easing: 'easeInOutQuad'}
     // );
+
+
+    $(document).ready(function() {
+        // $('#fullpage').fullpage({
+        //     recordHistory: false,
+        //     autoScrolling: false
+        // });
+
+        $(document).on("scroll", onScroll);
+
+        //smoothscroll
+        $('a[href^="#"]').on('click', function(e) {
+            e.preventDefault();
+            $(document).off("scroll");
+
+            $('a').each(function() {
+                $(this).removeClass('active');
+            })
+            $(this).addClass('active');
+
+            var target = this.hash,
+                menu = target;
+            $target = $(target);
+            $('html, body').stop().animate({
+                'scrollTop': $target.offset().top - 75
+            }, 500, 'swing', function() {
+                window.location.hash = target;
+
+
+                $(document).on("scroll", onScroll);
+            });
+        });
+
+    });
+    // #FixedMenu nav ul li a
+    function onScroll(event) {
+        var scrollPos = $(document).scrollTop();
+
+        ////
+        // console.log(scrollPos);
+        //
+
+        $('#FixedMenu nav ul li a').each(function() {
+            var currLink = $(this);
+            // console.log(currLink);
+            var refElement = $(currLink.attr("href"));
+            // console.log(refElement);
+            // refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos
+            if (refElement.position().top < scrollPos + 250) {
+                $('#FixedMenu nav ul li a').removeClass("active");
+                currLink.addClass("active");
+                // history.pushState("", document.title, window.location.pathname);
+            } else {
+                currLink.removeClass("active");
+            }
+        });
+    }
+
+
+    // var baseUrl = window.location.href.split('#')[0];
+    //window.location.replace( baseUrl + '#' + url );
 
     //------- SCROLL EVENT
     var lastScrollTop = 0;
