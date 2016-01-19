@@ -1,4 +1,6 @@
- #blogContent {
+#blog{
+    // @include test;
+     #blogContent {
      .Article {
          // @include test(blue);
          @include outer-container(100%);
@@ -26,3 +28,5 @@
          }
      }
  } // END BLOG CONTENT
+}
+

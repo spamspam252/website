@@ -1,31 +1,33 @@
 $(function() {
 
-    $('#logo, #name, #About, #Portfolio, #Blog, #Contact').click(function(event) {
+
+    // ------NAVBAR - LOGO CLICK EVENT
+    $('#logo, #name, #AboutNav, #PortfolioNav, #BlogNav, #ContactNav').click(function(event) {
         if (event.target.id == "logo" || event.target.id == "name")
             $(window).scrollTo('0%', 500);
-        else if (event.target.id == "About")
-            $(window).scrollTo('24.9%', 500);
-        else if (event.target.id == "Portfolio")
-            $(window).scrollTo('40.3%', 500);
-        else if (event.target.id == "Blog")
-            $(window).scrollTo('60.1%', 500);
-        else if(event.target.id == "Contact")
-            $(window).scrollTo('89.3%', 500);
-
+        else if (event.target.id == "AboutNav")
+            $(window).scrollTo($("#startAbout"), 500,{offset:-75});
+        else if (event.target.id == "PortfolioNav")
+            $(window).scrollTo($("#startPortfolio"), 500,{offset:-75});
+        else if (event.target.id == "BlogNav")
+            $(window).scrollTo($("#startBlog"), 500, {offset:-75});
+        else if (event.target.id == "ContactNav")
+            $(window).scrollTo($("#startContact"), 500, {offset:-75});
     });
+    // ------ END NAVBAR - LOGO CLICK EVENT
+
 
     // $(window).scrollTo('0%', 500
     // // , {  easing: 'easeInOutQuad'}
     // );
 
-
+    //------- SCROLL EVENT
     var lastScrollTop = 0;
     $(window).scroll(function(event) {
         var st = $(this).scrollTop();
         if (st >= lastScrollTop) {
-
             $('#FixedMenu').addClass("menuCollapse");
-
+            // console.log(st)
         } else {
             // upscroll code
             if (st <= 0) {
@@ -34,7 +36,7 @@ $(function() {
         }
         lastScrollTop = st;
     });
-
+    //------- END SCROLL EVENT
 
     $("#submitMessage").click(function() {
         $("#submitMessage").addClass("onclic", 250, validate);

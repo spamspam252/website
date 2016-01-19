@@ -13,15 +13,23 @@
             display: inline-block;
             margin: 0 70px;
             font-family: 'Hero';
-            color: $gray;
+            // color: $gray;
             position: relative;
             top: 0px;
             font-size: 13pt;
-            &:hover{
+            transition: all 0.25s ease;
+            &:hover {
                 cursor: pointer;
+                color: #6B7385;
+                transition: all 0.25s ease;
             }
         }
     }
+}
+
+.navSelected {
+    // color: #aaa;
+    color: #6B7385;
 }
 
 #name {

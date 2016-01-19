@@ -59,12 +59,19 @@ p {
       display: inline-block;
       margin: 0 70px;
       font-family: 'Hero';
-      color: #31353D;
       position: relative;
       top: 0px;
-      font-size: 13pt; }
+      font-size: 13pt;
+      -webkit-transition: all 0.25s ease;
+      transition: all 0.25s ease; }
       #navigation ul li:hover {
-        cursor: pointer; }
+        cursor: pointer;
+        color: #6B7385;
+        -webkit-transition: all 0.25s ease;
+        transition: all 0.25s ease; }
+
+.navSelected {
+  color: #6B7385; }
 
 #name {
   position: relative;
@@ -289,9 +296,9 @@ button {
   to {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg); } }
-#portfolioContent {
+#portfolio #portfolioContent {
   text-align: center; }
-  #portfolioContent .PortfolioLogo {
+  #portfolio #portfolioContent .PortfolioLogo {
     border: solid 1px red;
     width: 200px;
     height: 200px;
@@ -299,48 +306,48 @@ button {
     margin: 15px 50px;
     margin-bottom: 11px; }
 
-#blogContent .Article {
+#blog #blogContent .Article {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto; }
-  #blogContent .Article::after {
+  #blog #blogContent .Article::after {
     clear: both;
     content: "";
     display: table; }
-  #blogContent .Article h2 {
+  #blog #blogContent .Article h2 {
     font-size: 15pt;
     text-align: left; }
-  #blogContent .Article small {
+  #blog #blogContent .Article small {
     color: #9197a3;
     font-family: 'Hero'; }
-  #blogContent .Article .BlogImage {
+  #blog #blogContent .Article .BlogImage {
     border: solid 1px red;
     width: 200px;
     height: 200px;
     display: inline-block;
     float: left;
     margin: 15px 15px 11px 0; }
-  #blogContent .Article .ArticleText {
+  #blog #blogContent .Article .ArticleText {
     float: right;
     width: 75%;
     height: 100%;
     display: inline-block;
     margin-top: 35px; }
 
-#contactContent {
+#contact #contactContent {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 15px; }
-  #contactContent::after {
+  #contact #contactContent::after {
     clear: both;
     content: "";
     display: table; }
-  #contactContent #formContact label {
+  #contact #contactContent #formContact label {
     font-family: 'Hero'; }
-  #contactContent #formContact input[type="text"],
-  #contactContent #formContact input[type="email"],
-  #contactContent #formContact textarea {
+  #contact #contactContent #formContact input[type="text"],
+  #contact #contactContent #formContact input[type="email"],
+  #contact #contactContent #formContact textarea {
     font-family: 'Hero';
     padding: 12px;
     box-sizing: border-box;
@@ -353,12 +360,18 @@ button {
     margin-bottom: 20px;
     margin-top: 5px;
     resize: none; }
-  #contactContent #formContact input[type="text"]:focus,
-  #contactContent #formContact input[type="email"]:focus {
+  #contact #contactContent #formContact input[type="text"]:focus,
+  #contact #contactContent #formContact input[type="email"]:focus {
     background: #F1F1FA; }
 
 #newsLetter {
-  display: block; }
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto; }
+  #newsLetter::after {
+    clear: both;
+    content: "";
+    display: table; }
   #newsLetter input[type="email"],
   #newsLetter label,
   #newsLetter button {
@@ -423,7 +436,7 @@ footer #footerContent {
       background-image: url("../img/LinkedIn.png");
       background-size: 100%; }
 
-#container {
+#fullpage {
   background-color: #EEEFF7;
   position: relative;
   top: 112px;

@@ -1,4 +1,5 @@
-section#contact
+div(class="section fp-auto-height")#contact
+	+linex("startContact")
 	+sectionHeader("Contact")
 	+line
 	#contactContent
@@ -11,4 +12,3 @@ section#contact
 			label(for="formMessage") Message: *
 			textarea#formMessage(name="", cols="30", rows="10" )
 			button#submitMessage(type="button")
-	+line

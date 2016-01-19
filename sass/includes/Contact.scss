@@ -1,20 +1,23 @@
- #contactContent {
-     @include outer-container(100%);
-     margin-bottom: 15px;
-     #formContact {
-         label {
-             font-family: 'Hero';
-         }
-         input[type="text"],
-         input[type="email"],
-         textarea {
-             @include textBlock;
-         }
-         input[type="text"],
-         input[type="email"] {
-             &:focus {
-                 background: #F1F1FA;
-             }
-         }
-     }
- }
+#contact {
+    // @include test;
+    #contactContent {
+        @include outer-container(100%);
+        margin-bottom: 15px;
+        #formContact {
+            label {
+                font-family: 'Hero';
+            }
+            input[type="text"],
+            input[type="email"],
+            textarea {
+                @include textBlock;
+            }
+            input[type="text"],
+            input[type="email"] {
+                &:focus {
+                    background: #F1F1FA;
+                }
+            }
+        }
+    }
+}
