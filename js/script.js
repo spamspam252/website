@@ -13,7 +13,7 @@ $(function() {
     }, function() {
         $(this).children(".button-inside").removeClass('full');
     });
-
+    
     // $(window).scrollTo('0%', 500
     // // , {  easing: 'easeInOutQuad'}
     // );

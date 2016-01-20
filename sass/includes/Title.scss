@@ -28,7 +28,7 @@
     margin: 0;
     float: left;
     position: absolute;
-    top: 0px;
+    top: 0.1px;
     left: 50%;
     line-height: 54px;
     color: $white; // mau chu
@@ -42,7 +42,7 @@
 .button-inside.full {
     width: 100%;
     left: 0%;
-    top: 0;
+    top: 0.1px;
     // margin-right: -50px;
     background-color: $dark-blue; // mau dua ra
     // border: 1px solid #445561;
