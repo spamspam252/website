@@ -7,13 +7,13 @@ mixin linex(id)
 		.line
 			.round
 
-mixin sectionHeader(header)
+mixin sectionHeader(header, link)
 	.sectionHeader
-		a(href="#")
+		a(href=link, id=header+"Title")
 			.button-fill
 				.button-text= header
 				.button-inside
-					.inside-text Give&nbspMe&nbspMore
+					.inside-text Gimme&nbspMe&nbspMore&nbsp!!!
 
 mixin articleContent(blogImgSrc, title, time, bodyText)
 	article.Article
