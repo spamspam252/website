@@ -21,32 +21,10 @@
             a {
                 // color: $gray;
                 transition: all 0.1s ease-in-out 0s;
-                &:hover:before {
-                    cursor: pointer;
-                    transition: all 0.3s ease-in-out 0s;
-                    visibility: visible;
-                    transform: scaleX(1);
-                }
-                &:before {
-                    content: "";
-                    position: absolute;
-                    width: 100%;
-                    height: 1px;
-                    bottom: 0;
-                    left: 0;
-                    background-color: $gray;
-                    visibility: hidden;
-                    transform: scaleX(0);
-                    transition: all 0.3s ease-in-out 0s;
-                }
+                @include udlineAnimate;
             }
         }
     }
-}
-
-.navSelected {
-    // color: #aaa;
-    color: #6B7385;
 }
 
 #name {
@@ -66,7 +44,8 @@
     height: 65px;
     position: relative;
     top: 2px;
-    left: 46%;
+    // left: 47%;
+    // margin: 0 auto;
     // display: visible;
 }
 
@@ -74,10 +53,10 @@
     height: 75px; //override cai nay duoc
     #logoContent {
         // width: 0%;
-        height: 36px;
+        height: 32px;
         #logo {
             // margin-bottom: 50px;
-            left: 50%;
+            left: 0%;
             height: 0%;
             width: 0%;
         }
@@ -100,6 +79,7 @@ header {
     transition: all 0.25s ease;
     #logoContent {
         // @include test(green);
+        text-align: center;
         margin: 0 auto;
         position: relative;
         top: 2px;

@@ -30,6 +30,27 @@
     resize: none;
 }
 
+@mixin udlineAnimate {
+    &:hover:before {
+        cursor: pointer;
+        transition: all 0.3s ease-in-out 0s;
+        visibility: visible;
+        transform: scaleX(1);
+    }
+    &:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        bottom: 0;
+        left: 0;
+        background-color: $gray;
+        visibility: hidden;
+        transform: scaleX(0);
+        transition: all 0.3s ease-in-out 0s;
+    }
+}
+
 @font-face {
     font-family: 'Hero';
     /*a name to be used later*/
@@ -94,11 +115,32 @@ a {
 }
 
 .sectionHeader {
-    // @include test;
+    // @include test(black);
     // font-family: 'Hero';
-    margin: 100px auto;
+    // cursor: pointer;
+    text-align: center;
+    // margin: 100px auto;
+    height: 240px;
+    a {
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18pt;
+        font-weight: bold;
+        // @include test;
+        position: relative;
+    }
 }
 
 .active {
-    font-size: 15pt;
+    top: -2px;
+    font-size: 18pt;
+    // top: -10px;
+    // text-transform: uppercase;
+    // &:before{
+    //     height: 1px;
+    // }
 }

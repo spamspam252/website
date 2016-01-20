@@ -4,7 +4,7 @@ $(function() {
     $('#logo, #name').click(function(event) {
         // if (event.target.id == "logo" || event.target.id == "name")
         $(window).scrollTo('0%', 500);
-        window.location.hash = "#Home";
+        // window.location.hash = "#Home";
     });
     // ------ END NAVBAR - LOGO CLICK EVENT
 
@@ -15,11 +15,6 @@ $(function() {
 
 
     $(document).ready(function() {
-        // $('#fullpage').fullpage({
-        //     recordHistory: false,
-        //     autoScrolling: false
-        // });
-
         $(document).on("scroll", onScroll);
 
         //smoothscroll
@@ -29,7 +24,7 @@ $(function() {
 
             $('a').each(function() {
                 $(this).removeClass('active');
-            })
+            });
             $(this).addClass('active');
 
             var target = this.hash,
@@ -38,7 +33,7 @@ $(function() {
             $('html, body').stop().animate({
                 'scrollTop': $target.offset().top - 75
             }, 500, 'swing', function() {
-                window.location.hash = target;
+                window.location.replace = target;
 
 
                 $(document).on("scroll", onScroll);
