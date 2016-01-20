@@ -9,7 +9,11 @@ mixin linex(id)
 
 mixin sectionHeader(header)
 	.sectionHeader
-		a(href="")= header
+		a(href="#")
+			.button-fill
+				.button-text= header
+				.button-inside
+					.inside-text Give&nbspMe&nbspMore
 
 mixin articleContent(blogImgSrc, title, time, bodyText)
 	article.Article

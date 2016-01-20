@@ -8,6 +8,11 @@ $(function() {
     });
     // ------ END NAVBAR - LOGO CLICK EVENT
 
+    $(".button-fill").hover(function() {
+        $(this).children(".button-inside").addClass('full');
+    }, function() {
+        $(this).children(".button-inside").removeClass('full');
+    });
 
     // $(window).scrollTo('0%', 500
     // // , {  easing: 'easeInOutQuad'}

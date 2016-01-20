@@ -1,0 +1,60 @@
+@import "Global";
+
+.button-fill {
+
+    text-align: center;
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    // top: -50%;
+    text-transform: uppercase;
+    // margin: 25px;
+    background: $white; // mau nen
+    color: white;
+
+}
+
+.button-text {
+    color: $black;
+    letter-spacing: .1em;
+    position: relative;
+    top: 43%;
+}
+
+.button-inside {
+    width: 0px;
+    height: 100%;
+    margin: 0;
+    float: left;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    line-height: 54px;
+    color: $white; // mau chu
+    // color: $dark-blue;
+    background: $dark-blue; // mau thu vao
+    text-align: center;
+    overflow: hidden;
+    transition: width 0.5s, left 0.5s, margin 0.5s;
+}
+
+.button-inside.full {
+    width: 100%;
+    left: 0%;
+    top: 0;
+    // margin-right: -50px;
+    background-color: $dark-blue; // mau dua ra
+    // border: 1px solid #445561;
+}
+
+.inside-text {
+    text-align: center;
+    position: absolute;
+    right: 50%;
+    top: 38%;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    transform: translateX(50%);
+        // background-color: black;
+}

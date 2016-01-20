@@ -96,6 +96,7 @@ a {
     // @include test;
     width: 100%;
     height: 2px;
+    z-index: 1;
     background-image: url("../img/line.png");
     background-repeat: no-repeat;
     background-position: center;
@@ -121,13 +122,14 @@ a {
     text-align: center;
     // margin: 100px auto;
     height: 240px;
+    z-index: 10;
     a {
-        text-align: center;
+        // text-align: center;
         width: 100%;
         height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
         font-size: 18pt;
         font-weight: bold;
         // @include test;
