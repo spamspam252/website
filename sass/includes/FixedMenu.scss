@@ -2,6 +2,7 @@
 #navigation {
     // @include test(black);
     position: relative;
+    // top: -5px;
     // top: -50px;
     // bottom: -10px;
     // height: 100%;
@@ -9,6 +10,8 @@
     z-index: 7;
     ul {
         text-align: center;
+        position: relative;
+        top: 3px;
         li {
             display: inline-block;
             margin: 0 70px;
@@ -49,8 +52,67 @@
     // display: visible;
 }
 
+.menuPhone {
+    // @include test;
+    height: 50px !important; //override cai nay duoc
+    background-color: black;
+    #logoContent {
+        // @include test;
+        // width: 0%;
+        height: 32px;
+        display: inline-block !important;
+        position: relative;
+        left: 25%;
+        top: 5px;
+        #logo {
+            // @include test;
+            // margin-bottom: 50px;
+            left: 0%;
+            height: 0%;
+            width: 0%;
+        }
+        #name {
+            // display: block;
+            font-size: 18pt;
+            position: relative;
+            // top: 2px;
+            // @include test;
+            // background-color: black;
+
+            text-align: center;
+        }
+    }
+    #navigation{
+        .line{
+            display: none;
+        }
+    }
+
+}
+
+// .logoPhone {
+//     @include test(green);
+//     display: inline-block;
+//     position: relative;
+//     left: 25%;
+//     #name {
+//         position: relative;
+//         // top: 2px;
+//         @include test;
+//         // background-color: black;
+//         text-align: center;
+//         // padding: 0;
+//         // margin: 0;
+//     }
+//     //     margin: 0 auto;
+//     // position: relative;
+//     // top: 2px;
+//     // margin-bottom: 5px;
+//     // background-color: black;
+// }
 .menuCollapse {
-    height: 75px; //override cai nay duoc
+    height: 75px !important; //override cai nay duoc
+    background-color: black;
     #logoContent {
         // width: 0%;
         height: 32px;
@@ -67,9 +129,10 @@
     }
 }
 
-header {
-    // @include test;
+#menuContainer {
+    // @include test(black);
     height: 110px;
+    // height: 100%;
     width: 100%;
     position: fixed;
     top: 0px;
@@ -77,38 +140,43 @@ header {
     background-color: $white;
     z-index: 5;
     transition: all 0.25s ease;
-    #logoContent {
-        // @include test(green);
-        text-align: center;
-        margin: 0 auto;
-        position: relative;
-        top: 2px;
-        margin-bottom: 5px;
-        width: 100%;
-        height: 73px;
-        transition: all 0.25s ease;
-        #logo {
-            // display: none;
-            // top: -10px;
-            transition: all 0.25s ease;
-            &:hover {
-                cursor: pointer;
-            }
-        }
-        #name {
-            // display: none;
-            // content: "asd";
-            font-size: 0pt;
-            transition: all 0.25s ease;
-            &:hover {
-                cursor: pointer;
-            }
-        }
-    }
     .line {
         // @include test;
         width: 960px;
         margin: 0 auto;
-        margin-bottom: 3.5px;
+        // margin-bottom: 3.5px;
     }
 }
+
+#logoContent {
+    // @include test(green);
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+    top: 2px;
+    margin-bottom: 5px;
+    width: 50%;
+    height: 73px;
+    transition: all 0.25s ease;
+    #logo {
+        // display: none;
+        // top: -10px;
+        transition: all 0.25s ease;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    #name {
+        // display: none;
+        // content: "asd";
+        font-size: 0pt;
+        transition: all 0.25s ease;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+// #FixedMenu{
+//     @include test;
+// }

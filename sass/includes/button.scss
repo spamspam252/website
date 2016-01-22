@@ -9,7 +9,7 @@ $gray: #bbbbbb;
     font-family: 'Hero';
 }
 
-button {
+.submitButton {
     // margin-top: 15px;
     margin-bottom: 5px;
     outline: none;
@@ -73,6 +73,10 @@ button {
     to {
         transform: rotate(360deg);
     }
+}
+
+.navbar-toggle.collapsed{  
+    
 }
 
 

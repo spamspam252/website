@@ -90,6 +90,12 @@ a {
     color: $gray;
     text-decoration: none;
     position: relative;
+    &:hover,
+    &:focus,
+    &:visited {
+        color: $black;
+        text-decoration: none;
+    }
 }
 
 .line {
@@ -145,4 +151,19 @@ a {
     // &:before{
     //     height: 1px;
     // }
+}
+
+.navbar-header {
+    // @include test;
+    button{
+        margin: 0;
+        padding: 0;
+        // display: inline-block;
+    }
+    display: inline-block;
+    position: relative;
+    font-size: 18pt;
+    color: $gray;
+    top: -2px;
+    left: 10px;
 }

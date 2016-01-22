@@ -1,20 +1,25 @@
 //- header.menuExpand
 //- header.menuCollapse
-header(id="FixedMenu")
-	#logoContent
-		img(src="img/test5.gif", alt="Nope")#logo
-		p#name Vũ Nguyên Hưng
-	nav#navigation
-		+line
-		ul
-			li#aboutNav
-				a(href="#About") About
-			li#portfolioNav
-				a(href="#Portfolio") Portfolio
-			li#blogNav
-				a(href="#Blog") Blog
-			li#contactNav
-				a(href="#Contact") Contact
+nav#FixedMenu.navbar.navbar-left
+	#menuContainer.container-fluid
+		.navbar-header
+			button(type="button" data-toggle="collapse" data-target="#navigation").navbar-toggle.collapsed
+				span.sr-only Toggle navigation
+				span.glyphicon.glyphicon-align-justify
+		#logoContent
+			img(src="img/test5.gif", alt="Nope")#logo
+			p#name Vũ Nguyên Hưng
+		nav#navigation.collapse.navbar-collapse
+			+line
+			ul
+				li#aboutNav
+					a(href="#About") About
+				li#portfolioNav
+					a(href="#Portfolio") Portfolio
+				li#blogNav
+					a(href="#Blog") Blog
+				li#contactNav
+					a(href="#Contact") Contact
 
 			//- each val in ["About", "Portfolio", "Blog", "Contact"]
 			//- 	li(id= val+"Nav") !{val}

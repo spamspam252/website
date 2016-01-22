@@ -32,6 +32,9 @@ a {
   color: #31353D;
   text-decoration: none;
   position: relative; }
+  a:hover, a:focus, a:visited {
+    color: #1C1D21;
+    text-decoration: none; }
 
 .line {
   width: 100%;
@@ -67,12 +70,25 @@ a {
   top: -2px;
   font-size: 18pt; }
 
+.navbar-header {
+  display: inline-block;
+  position: relative;
+  font-size: 18pt;
+  color: #31353D;
+  top: -2px;
+  left: 10px; }
+  .navbar-header button {
+    margin: 0;
+    padding: 0; }
+
 #navigation {
   position: relative;
   width: 100%;
   z-index: 7; }
   #navigation ul {
-    text-align: center; }
+    text-align: center;
+    position: relative;
+    top: 3px; }
     #navigation ul li {
       display: inline-block;
       margin: 0 70px;
@@ -122,8 +138,29 @@ a {
   position: relative;
   top: 2px; }
 
+.menuPhone {
+  height: 50px !important;
+  background-color: black; }
+  .menuPhone #logoContent {
+    height: 32px;
+    display: inline-block !important;
+    position: relative;
+    left: 25%;
+    top: 5px; }
+    .menuPhone #logoContent #logo {
+      left: 0%;
+      height: 0%;
+      width: 0%; }
+    .menuPhone #logoContent #name {
+      font-size: 18pt;
+      position: relative;
+      text-align: center; }
+  .menuPhone #navigation .line {
+    display: none; }
+
 .menuCollapse {
-  height: 75px; }
+  height: 75px !important;
+  background-color: black; }
   .menuCollapse #logoContent {
     height: 32px; }
     .menuCollapse #logoContent #logo {
@@ -133,7 +170,7 @@ a {
     .menuCollapse #logoContent #name {
       font-size: 16pt; }
 
-header {
+#menuContainer {
   height: 110px;
   width: 100%;
   position: fixed;
@@ -143,31 +180,31 @@ header {
   z-index: 5;
   -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease; }
-  header #logoContent {
-    text-align: center;
-    margin: 0 auto;
-    position: relative;
-    top: 2px;
-    margin-bottom: 5px;
-    width: 100%;
-    height: 73px;
+  #menuContainer .line {
+    width: 960px;
+    margin: 0 auto; }
+
+#logoContent {
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+  top: 2px;
+  margin-bottom: 5px;
+  width: 50%;
+  height: 73px;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease; }
+  #logoContent #logo {
     -webkit-transition: all 0.25s ease;
     transition: all 0.25s ease; }
-    header #logoContent #logo {
-      -webkit-transition: all 0.25s ease;
-      transition: all 0.25s ease; }
-      header #logoContent #logo:hover {
-        cursor: pointer; }
-    header #logoContent #name {
-      font-size: 0pt;
-      -webkit-transition: all 0.25s ease;
-      transition: all 0.25s ease; }
-      header #logoContent #name:hover {
-        cursor: pointer; }
-  header .line {
-    width: 960px;
-    margin: 0 auto;
-    margin-bottom: 3.5px; }
+    #logoContent #logo:hover {
+      cursor: pointer; }
+  #logoContent #name {
+    font-size: 0pt;
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease; }
+    #logoContent #name:hover {
+      cursor: pointer; }
 
 @font-face {
   font-family: 'Hero';
@@ -197,6 +234,9 @@ a {
   color: #31353D;
   text-decoration: none;
   position: relative; }
+  a:hover, a:focus, a:visited {
+    color: #1C1D21;
+    text-decoration: none; }
 
 .line {
   width: 100%;
@@ -231,6 +271,17 @@ a {
 .active {
   top: -2px;
   font-size: 18pt; }
+
+.navbar-header {
+  display: inline-block;
+  position: relative;
+  font-size: 18pt;
+  color: #31353D;
+  top: -2px;
+  left: 10px; }
+  .navbar-header button {
+    margin: 0;
+    padding: 0; }
 
 #gallery {
   width: 100%;
@@ -267,6 +318,9 @@ a {
   color: #31353D;
   text-decoration: none;
   position: relative; }
+  a:hover, a:focus, a:visited {
+    color: #1C1D21;
+    text-decoration: none; }
 
 .line {
   width: 100%;
@@ -302,10 +356,21 @@ a {
   top: -2px;
   font-size: 18pt; }
 
+.navbar-header {
+  display: inline-block;
+  position: relative;
+  font-size: 18pt;
+  color: #31353D;
+  top: -2px;
+  left: 10px; }
+  .navbar-header button {
+    margin: 0;
+    padding: 0; }
+
 * {
   font-family: 'Hero'; }
 
-button {
+.submitButton {
   margin-bottom: 5px;
   outline: none;
   height: 40px;
@@ -322,12 +387,12 @@ button {
   cursor: pointer;
   -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease; }
-  button:hover {
+  .submitButton:hover {
     color: white;
     background: #445878; }
-  button:active {
+  .submitButton:active {
     letter-spacing: 2px; }
-  button:after {
+  .submitButton:after {
     content: "SUBMIT"; }
 
 .onclic {
@@ -547,6 +612,9 @@ a {
   color: #31353D;
   text-decoration: none;
   position: relative; }
+  a:hover, a:focus, a:visited {
+    color: #1C1D21;
+    text-decoration: none; }
 
 .line {
   width: 100%;
@@ -581,6 +649,17 @@ a {
 .active {
   top: -2px;
   font-size: 18pt; }
+
+.navbar-header {
+  display: inline-block;
+  position: relative;
+  font-size: 18pt;
+  color: #31353D;
+  top: -2px;
+  left: 10px; }
+  .navbar-header button {
+    margin: 0;
+    padding: 0; }
 
 .button-fill {
   text-align: center;
