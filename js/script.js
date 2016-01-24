@@ -4,28 +4,19 @@ $(function() {
     (function($, viewport) {
         $(document).ready(function() {
 
-            // Executes only in XS breakpoint
-            if (viewport.is('xs')) {
-                size = 1;
-                console.log(size);
-                $('#menuContainer').addClass("menuPhone");
-                // $('#logoContent').addClass("logoPhone");
-
-
-            }
 
             // Executes in SM, MD and LG breakpoints
-            if (viewport.is('sm')) {
+            if (viewport.is('<=sm')) {
                 size = 2;
                 console.log(size);
                 $('#menuContainer').addClass("menuPhone");
+                $('#navigation').addClass("navbar-expand")
                 // $('#logoContent').addClass("logoPhone");
-
-
+                
             }
 
             // Executes in XS and SM breakpoints
-            if (viewport.is('md')) {
+            if (viewport.is('>sm')) {
                 size = 3;
                 console.log(size);
 

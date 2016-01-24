@@ -78,38 +78,16 @@
             // top: 2px;
             // @include test;
             // background-color: black;
-
             text-align: center;
         }
     }
-    #navigation{
-        .line{
+    #navigation {
+        .line {
             display: none;
         }
     }
-
 }
 
-// .logoPhone {
-//     @include test(green);
-//     display: inline-block;
-//     position: relative;
-//     left: 25%;
-//     #name {
-//         position: relative;
-//         // top: 2px;
-//         @include test;
-//         // background-color: black;
-//         text-align: center;
-//         // padding: 0;
-//         // margin: 0;
-//     }
-//     //     margin: 0 auto;
-//     // position: relative;
-//     // top: 2px;
-//     // margin-bottom: 5px;
-//     // background-color: black;
-// }
 .menuCollapse {
     height: 75px !important; //override cai nay duoc
     background-color: black;
@@ -177,6 +155,25 @@
     }
 }
 
-// #FixedMenu{
-//     @include test;
-// }
+.navbar-expand {
+    // @include test(green);
+    // background-color: black;
+    // position: relative;
+    // top: 0 !important;
+    margin: 0 auto !important;
+    ul {
+        // margin: 0 auto !important;s
+        // background-color: white;
+        background-color: rgba(217, 219, 227, 0.6);
+        li {
+            display: block !important;
+            border-bottom: solid 1px $black;
+            margin: 10px 0 !important;
+            padding: 5px 0;
+            a {
+                font-size: 16pt;
+            }
+
+        }
+    }
+}

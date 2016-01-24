@@ -206,6 +206,18 @@ a {
     #logoContent #name:hover {
       cursor: pointer; }
 
+.navbar-expand {
+  margin: 0 auto !important; }
+  .navbar-expand ul {
+    background-color: rgba(217, 219, 227, 0.6); }
+    .navbar-expand ul li {
+      display: block !important;
+      border-bottom: solid 1px #1C1D21;
+      margin: 10px 0 !important;
+      padding: 5px 0; }
+      .navbar-expand ul li a {
+        font-size: 16pt; }
+
 @font-face {
   font-family: 'Hero';
   /*a name to be used later*/
