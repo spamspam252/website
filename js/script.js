@@ -10,7 +10,11 @@ $(function() {
                 size = 2;
                 console.log(size);
                 $('#menuContainer').addClass("menuPhone");
-                $('#navigation').addClass("navbar-expand")
+                $('#navigation').addClass("navbar-expand");
+                $('#aboutNav a').attr("href","About");
+                $('#portfolioNav a').attr("href","Portfolio");
+                $('#blogNav a').attr("href","Blog");
+                $('#contactNav a').attr("href","Contact");
                 // $('#logoContent').addClass("logoPhone");
                 
             }
