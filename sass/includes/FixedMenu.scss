@@ -56,13 +56,16 @@
     // @include test;
     height: 120px !important; //override cai nay duoc
     // background-color: black;
+     background-color: rgba(238, 239, 247, 0.6) !important;
+     box-shadow: none !important;
+     border-bottom: solid 1px #757575;
     .navbar-header {
         .glyphicon-align-justify {
             // @include test;
             font-size: 50pt;
             width: 100px;
             position: relative;
-            top: 10px;
+            top: 25px;
             // top: 50%;
         }
     }
@@ -73,7 +76,7 @@
         display: inline-block !important;
         position: relative;
         left: 15%;
-        top: 10px;
+        top: 15px;
         #logo {
             // @include test;
             // margin-bottom: 50px;
@@ -83,7 +86,7 @@
         }
         #name {
             // display: block;
-            font-size: 50pt;
+            font-size: 40pt;
             position: relative;
             // top: 2px;
             // @include test;
@@ -125,6 +128,7 @@
     width: 100%;
     position: fixed;
     top: 0px;
+    left: 0;
     box-shadow: 0px 3px 11px -1px rgba(117, 117, 117, 1);
     background-color: $white;
     z-index: 5;

@@ -12,7 +12,9 @@ $(function() {
                 $('#menuContainer').addClass("menuPhone");
                 $('#navigation').addClass("navbar-expand");
                 $('article').addClass('articleCollapse');
-                $('body').addClass('bodyPhone');
+                $('#sections').addClass('sectionsPhone');
+                // $('#container').addClass('bodyPhone');
+                // $('body').addClass('bodyPhone');
 
 
                 $('#aboutNav a').attr("href","About");

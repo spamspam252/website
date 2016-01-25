@@ -30,11 +30,12 @@ html
 		link(rel="icon", href="img/chuki.png", type="image/x-icon")
 
 			
-	body
-		include includes/FixedMenu.jade
-		
-		#fullpage.container
+	body.container
+		#container.container
 
+			include includes/FixedMenu.jade
+
+			#sections
 			include includes/Gallery.jade
 			//- END GALLERY
 

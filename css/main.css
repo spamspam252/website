@@ -85,7 +85,7 @@ a {
   .container {
     width: 100% !important;
     position: relative;
-    left: 50%; }
+    overflow-x: hidden; }
 
   .navbar-header {
     float: none; }
@@ -179,24 +179,27 @@ a {
   top: 2px; }
 
 .menuPhone {
-  height: 120px !important; }
+  height: 120px !important;
+  background-color: rgba(238, 239, 247, 0.6) !important;
+  box-shadow: none !important;
+  border-bottom: solid 1px #757575; }
   .menuPhone .navbar-header .glyphicon-align-justify {
     font-size: 50pt;
     width: 100px;
     position: relative;
-    top: 10px; }
+    top: 25px; }
   .menuPhone #logoContent {
     height: 100px;
     display: inline-block !important;
     position: relative;
     left: 15%;
-    top: 10px; }
+    top: 15px; }
     .menuPhone #logoContent #logo {
       left: 0%;
       height: 0%;
       width: 0%; }
     .menuPhone #logoContent #name {
-      font-size: 50pt;
+      font-size: 40pt;
       position: relative;
       text-align: center;
       width: 100%; }
@@ -220,6 +223,7 @@ a {
   width: 100%;
   position: fixed;
   top: 0px;
+  left: 0;
   box-shadow: 0px 3px 11px -1px #757575;
   background-color: #EEEFF7;
   z-index: 5;
@@ -346,7 +350,7 @@ a {
   .container {
     width: 100% !important;
     position: relative;
-    left: 50%; }
+    overflow-x: hidden; }
 
   .navbar-header {
     float: none; }
@@ -470,7 +474,7 @@ a {
   .container {
     width: 100% !important;
     position: relative;
-    left: 50%; }
+    overflow-x: hidden; }
 
   .navbar-header {
     float: none; }
@@ -732,15 +736,14 @@ footer #footerContent {
 
 .container-expand {
   position: relative;
-  top: 110px;
-  width: 990px; }
+  top: 50px;
+  width: 990px !important; }
 
 body {
-  background-color: #EEEFF7;
-  width: 100%; }
+  background-color: #EEEFF7; }
 
-.bodyPhone {
-  width: 2000px; }
+.sectionsPhone {
+  margin-top: 70px; }
 
 @font-face {
   font-family: 'Hero';
@@ -823,7 +826,7 @@ a {
   .container {
     width: 100% !important;
     position: relative;
-    left: 50%; }
+    overflow-x: hidden; }
 
   .navbar-header {
     float: none; }

@@ -170,11 +170,12 @@ a {
 }
 
 @media(max-width:991px) {
-    .container{
+    .container {
         width: 100% !important;
         position: relative;
+        overflow-x: hidden;
         // margin: 0 auto !important;
-        left: 50%;
+        // left: 50%;
     }
     .navbar-header {
         float: none;
