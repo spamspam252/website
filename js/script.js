@@ -13,6 +13,16 @@ $(function() {
                 $('#navigation').addClass("navbar-expand");
                 $('article').addClass('articleCollapse');
                 $('#sections').addClass('sectionsPhone');
+                $('.sectionHeader').addClass('sectionHeader-Phone');
+                $('#blogSection').addClass('blogSection-Phone');
+                $('#newsLetter').addClass('newsLetter-Phone');
+
+
+                $('.button-fill').removeClass('button-fill');
+                $('.button-text').removeClass('button-text');
+                $('.button-inside').removeClass('button-inside');
+                $('.inside-text').text("");
+                $('.inside-text').removeClass('inside-text');
                 // $('#container').addClass('bodyPhone');
                 // $('body').addClass('bodyPhone');
 

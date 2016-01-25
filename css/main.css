@@ -66,6 +66,10 @@ a {
     font-weight: bold;
     position: relative; }
 
+.sectionHeader-Phone a {
+  border: solid 1px #EEEFF7;
+  font-size: 40pt !important; }
+
 .active {
   top: -2px;
   font-size: 18pt; }
@@ -331,6 +335,10 @@ a {
     font-weight: bold;
     position: relative; }
 
+.sectionHeader-Phone a {
+  border: solid 1px #EEEFF7;
+  font-size: 40pt !important; }
+
 .active {
   top: -2px;
   font-size: 18pt; }
@@ -454,6 +462,10 @@ a {
     font-size: 18pt;
     font-weight: bold;
     position: relative; }
+
+.sectionHeader-Phone a {
+  border: solid 1px #EEEFF7;
+  font-size: 40pt !important; }
 
 .active {
   top: -2px;
@@ -628,6 +640,18 @@ a {
     .articleCollapse .ArticleText h2 {
       position: relative;
       left: 40%; }
+    .articleCollapse .ArticleText p {
+      text-align: justify;
+      width: 100%; }
+
+.blogSection-Phone h2 {
+  font-size: 30pt !important;
+  left: 37% !important;
+  margin-bottom: 0px; }
+.blogSection-Phone p {
+  font-size: 25pt; }
+.blogSection-Phone small {
+  font-size: 17pt; }
 
 #contactSection #contactContent {
   max-width: 100%;
@@ -698,6 +722,11 @@ a {
       background: #F1F1FA; }
   #newsLetter label {
     margin-top: 12px; }
+
+.newsLetter-Phone input[type="email"],
+.newsLetter-Phone label,
+.newsLetter-Phone button {
+  margin-right: 5px !important; }
 
 footer #footerContent {
   margin-bottom: 15px;
@@ -806,6 +835,10 @@ a {
     font-size: 18pt;
     font-weight: bold;
     position: relative; }
+
+.sectionHeader-Phone a {
+  border: solid 1px #EEEFF7;
+  font-size: 40pt !important; }
 
 .active {
   top: -2px;

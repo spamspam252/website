@@ -144,6 +144,19 @@ a {
     }
 }
 
+.sectionHeader-Phone{
+    // @include test;
+    a{
+        // width: 100%;
+        // height: 100%;
+        @include test($white);
+        font-size: 40pt !important;
+        // top: -20px;
+        // top: 50%;
+    }
+    
+}
+
 .active {
     top: -2px;
     font-size: 18pt;
