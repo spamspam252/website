@@ -10,5 +10,9 @@
 @import "Container";
 body {
     background-color: $white;
-    
+    width: 100%;
 } // END body
+
+.bodyPhone{
+	width: 2000px;
+}

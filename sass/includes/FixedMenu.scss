@@ -54,16 +54,26 @@
 
 .menuPhone {
     // @include test;
-    height: 50px !important; //override cai nay duoc
-    background-color: black;
+    height: 120px !important; //override cai nay duoc
+    // background-color: black;
+    .navbar-header {
+        .glyphicon-align-justify {
+            // @include test;
+            font-size: 50pt;
+            width: 100px;
+            position: relative;
+            top: 10px;
+            // top: 50%;
+        }
+    }
     #logoContent {
         // @include test;
-        // width: 0%;
-        height: 32px;
+        // width: 100%;
+        height: 100px;
         display: inline-block !important;
         position: relative;
-        left: 25%;
-        top: 5px;
+        left: 15%;
+        top: 10px;
         #logo {
             // @include test;
             // margin-bottom: 50px;
@@ -73,12 +83,13 @@
         }
         #name {
             // display: block;
-            font-size: 18pt;
+            font-size: 50pt;
             position: relative;
             // top: 2px;
             // @include test;
             // background-color: black;
             text-align: center;
+            width: 100%;
         }
     }
     #navigation {
@@ -160,20 +171,21 @@
     // background-color: black;
     // position: relative;
     // top: 0 !important;
+    position: relative;
+    top: 2px;
     margin: 0 auto !important;
     ul {
         // margin: 0 auto !important;s
         // background-color: white;
-        background-color: rgba(217, 219, 227, 0.6);
+        background-color: rgba(238, 239, 247, 0.6);
         li {
             display: block !important;
             border-bottom: solid 1px $black;
             margin: 10px 0 !important;
-            padding: 5px 0;
+            padding: 30px 0;
             a {
-                font-size: 16pt;
+                font-size: 45pt;
             }
-
         }
     }
 }

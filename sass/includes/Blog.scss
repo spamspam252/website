@@ -1,32 +1,58 @@
-#blogSection{
+#blogSection {
     // @include test;
-     #blogContent {
-     .Article {
-         // @include test(blue);
-         @include outer-container(100%);
-         // margin: 20px;
-         h2 {
-             font-size: 15pt;
-             text-align: left;
-         }
-         small {
-             color: #9197a3;
-             font-family: 'Hero';
-         }
-         .BlogImage {
-             @include ImageBlock;
-             float: left;
-             margin: 15px 15px 11px 0;
-         }
-         .ArticleText {
-             float: right;
-             width: 75%;
-             height: 100%;
-             display: inline-block;
-             // vertical-align: middle;
-             margin-top: 35px;
-         }
-     }
- } // END BLOG CONTENT
+    #blogContent {
+        .Article {
+            // @include test(blue);
+            @include outer-container(100%);
+            // margin: 20px;
+            h2 {
+                font-size: 15pt;
+                text-align: left;
+            }
+            small {
+                color: #9197a3;
+                font-family: 'Hero';
+            }
+            .BlogImage {
+                @include ImageBlock;
+                float: left;
+                margin: 15px 15px 11px 0;
+            }
+            .ArticleText {
+                float: right;
+                width: 75%;
+                height: 100%;
+                display: inline-block;
+                // vertical-align: middle;
+                margin-top: 35px;
+            }
+        }
+    } // END BLOG CONTENT
 }
 
+.articleCollapse {
+    border-bottom: solid 1px #bbb !important;
+    .BlogImage {
+        // @include test;
+        float: none !important;
+        // text-align: center;
+        width: 100% !important;
+        img{
+            width: 100% !important;
+            // margin: 0 auto;
+            // position: relative;
+            // left: 30%;
+        }
+    }
+    .ArticleText{
+        float: none !important;
+        width: 100% !important;
+        margin-top: 0 !important;
+        text-align: center;
+        h2{
+            // text-align: center;
+            position: relative;
+            left: 40%;
+        }
+    }
+}

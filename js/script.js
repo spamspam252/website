@@ -11,6 +11,10 @@ $(function() {
                 console.log(size);
                 $('#menuContainer').addClass("menuPhone");
                 $('#navigation').addClass("navbar-expand");
+                $('article').addClass('articleCollapse');
+                $('body').addClass('bodyPhone');
+
+
                 $('#aboutNav a').attr("href","About");
                 $('#portfolioNav a').attr("href","Portfolio");
                 $('#blogNav a').attr("href","Blog");
@@ -23,6 +27,8 @@ $(function() {
             if (viewport.is('>sm')) {
                 size = 3;
                 console.log(size);
+
+                $('#container').addClass('container-expand');
 
 
                 $('#logo, #name').click(function(event) {
