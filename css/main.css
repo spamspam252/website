@@ -125,6 +125,12 @@ a {
 
   .collapse.in {
     display: block !important; } }
+@media (min-width: 1000px) {
+  .container {
+    width: 960px !important;
+    margin: 0 auto !important;
+    padding-right: 0;
+    padding-left: 0; } }
 #navigation {
   position: relative;
   width: 100%;
@@ -394,6 +400,12 @@ a {
 
   .collapse.in {
     display: block !important; } }
+@media (min-width: 1000px) {
+  .container {
+    width: 960px !important;
+    margin: 0 auto !important;
+    padding-right: 0;
+    padding-left: 0; } }
 #gallery {
   width: 100%;
   position: relative; }
@@ -522,6 +534,12 @@ a {
 
   .collapse.in {
     display: block !important; } }
+@media (min-width: 1000px) {
+  .container {
+    width: 960px !important;
+    margin: 0 auto !important;
+    padding-right: 0;
+    padding-left: 0; } }
 * {
   font-family: 'Hero'; }
 
@@ -594,8 +612,18 @@ a {
     width: 200px;
     height: 200px;
     display: inline-block;
+    background-image: url("../img/BussinessCard.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
     margin: 15px 50px;
-    margin-bottom: 11px; }
+    margin-bottom: 11px;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s; }
+    #portfolioSection #portfolioContent .PortfolioLogo:hover {
+      -webkit-transform: scale(1.5, 1.5);
+          -ms-transform: scale(1.5, 1.5);
+              transform: scale(1.5, 1.5); }
 
 #blogSection #blogContent .Article {
   max-width: 100%;
@@ -713,7 +741,7 @@ a {
     margin-bottom: 20px;
     margin-top: 5px;
     resize: none;
-    margin-top: 1.5px;
+    margin-top: 3px;
     display: inline-block;
     width: 79%;
     padding: 8.5px;
@@ -766,6 +794,7 @@ footer #footerContent {
 .container-expand {
   position: relative;
   top: 50px;
+  margin: 0 auto;
   width: 990px !important; }
 
 body {
@@ -895,6 +924,12 @@ a {
 
   .collapse.in {
     display: block !important; } }
+@media (min-width: 1000px) {
+  .container {
+    width: 960px !important;
+    margin: 0 auto !important;
+    padding-right: 0;
+    padding-left: 0; } }
 .button-fill {
   text-align: center;
   display: block;

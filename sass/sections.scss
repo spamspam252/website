@@ -1,0 +1,72 @@
+$white: #EEEFF7;
+$blue: #92CDCF;
+$dark-blue: #445878;
+$gray: #31353D;
+$black: #1C1D21;
+@mixin test($color:red) {
+    border: solid 1px $color;
+}
+
+@font-face {
+    font-family: 'Hero';
+    /*a name to be used later*/
+    src: url('../font/Hero.ttf');
+    /*URL to font*/
+}
+
+* {
+    font-family: 'Hero';
+}
+
+body {
+    background-color: $white;
+}
+
+h1 {
+    text-align: center;
+    padding: 15px;
+    // padding-top: 0px;
+}
+
+h2 {
+    line-height: 1.5;
+    text-align: justify;
+    font-size: 20pt;
+    padding-top: 0;
+    margin-top: 0;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.container-fluid {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.ContentWrapper {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+#aboutImg {
+    // margin: auto 0;
+    position: relative;
+    // top: 70%;
+    // margin-top: 20px;
+    // top: 30% !important;
+}
+
+#title {
+    border-bottom: 1px solid #aaa;
+    width: 30%;
+    margin: 0 auto;
+}
+
+#aboutText {
+    border-bottom: solid 1px #aaa;
+}

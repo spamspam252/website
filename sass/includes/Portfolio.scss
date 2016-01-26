@@ -1,11 +1,17 @@
 #portfolioSection {
-	// @include test;
+    // @include test;
     #portfolioContent {
         text-align: center;
         .PortfolioLogo {
             @include ImageBlock;
+            @include setIconBackground("../img/BussinessCard.png");
             margin: 15px 50px;
             margin-bottom: 11px;
+            // background-color: black;
+            transition: all 0.3s ease-in-out 0s;
+            &:hover{
+                transform: scale(1.5,1.5);
+            }
         }
     }
 }
