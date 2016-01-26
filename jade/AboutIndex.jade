@@ -1,5 +1,10 @@
 include includes/global.jade
 
+mixin studyPlace(title, place)
+	.studyPlace
+		h3= title
+		p= place
+
 doctype html
 html
 	head
@@ -22,11 +27,54 @@ html
 	body
 		.container-fluid
 			.row
-				h1#title ABOUT ME
+				h1 ABOUT ME
 			.ContentWrapper
-				.row
-					h2#aboutText.col-md-8.col-sm-8 Hi, I'm Nguyen Hung Vu, Vietnamese newbie Web Developer studying Computer Science at Ton Duc Thang University &amp; living in Ho Chi Minh City, Viet Nam.
-					img#aboutImg(src="../img/BussinessCard.png", alt="Nope").col-md-4.col-sm-4
+					.row
+						h2#aboutText.col-md-6.col-sm-6 Hi, I'm Nguyen Hung Vu, Vietnamese newbie Web Developer studying Computer Science at Ton Duc Thang University &amp; living in Ho Chi Minh City, Viet Nam.
+						img#aboutImg(src="../img/BussinessCard.png", alt="Nope").col-md-6.col-sm-6
+				.section		
+					h1#funFact A FEW FUN FACTS
+					.row
+						h2#funFactsText I love coffee, cat and manga. At the age of 19, I found my passion for Web Development and actually this is my first website (but I swear version 2.0 of this will come out soon). My favorite number is 25. Not a big fan of any kind of sport but I especially love music and usually singing along whenever my favorite songs are played.
+				.section		
+					h1#skill MY SKILL SETS
+					.row#skillContent
+						ul.col-md-5.col-sm-5 DAY-TO-DAY COMFORT
+							li Sass
+							li Jade
+							li HTML5 / CSS3
+							li JavaScript / jQuery
+							li Bootstrap / Neat
+							li PHP
+							li Version Control (GIT)
+							li WordPress
+							li Java / C#
+						ul.col-md-4.col-sm-4 EXPERIENCE WITH
+							li Adobe Photoshop
+							li Adobe After Effect
+							li Adobe Illustrator
+						ul.col-md-3.col-sm-3 LEARNING
+							li Node.js
+							li AJAX
+							li Ruby on Rails
+				.section			
+					h1#education EDUCATION
+					.row#educationContent
+						+studyPlace("GENERAL EDUCATION AND VOCATIONAL SCHOOL","Tran Khai Nguyen High School, Ho Chi Minh City, 2011 - 2014")
+						+studyPlace("COMPUTER SCIENCE","Ton Duc Thang University, Ho Chi Minh City, 2014 - 2018")
+						+studyPlace("WEB DEVELOPMENT", "Self-Study, 2016 - End of my life")
+				.section#contactSection
+					h3 INTERESTED?
+					a(href="Contact")
+						button.submitButton
+
+
+
+
+
+
+
+
 
 
 

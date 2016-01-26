@@ -1,3 +1,4 @@
+@import "includes/button";
 $white: #EEEFF7;
 $blue: #92CDCF;
 $dark-blue: #445878;
@@ -16,6 +17,7 @@ $black: #1C1D21;
 
 * {
     font-family: 'Hero';
+    font-size: 25pt;
 }
 
 body {
@@ -26,19 +28,36 @@ h1 {
     text-align: center;
     padding: 15px;
     // padding-top: 0px;
+    border-bottom: 1px solid #aaa;
+    width: 30%;
+    margin: 0 auto;
+    font-size: 30pt;
 }
 
 h2 {
     line-height: 1.5;
     text-align: justify;
-    font-size: 20pt;
     padding-top: 0;
     margin-top: 0;
+    // padding-bottom: 40px;
+    // border-bottom: solid 1px #aaa;
+    // margin-bottom: 20px
 }
 
 img {
     width: 100%;
     height: 100%;
+}
+
+ul {
+    font-size: 20pt;
+    // border-bottom: solid 1px #aaa;
+    // margin: 0 auto;
+    li {
+        font-size: 15pt;
+        // margin: 0 auto;
+        margin-left: 20px;
+    }
 }
 
 .container-fluid {
@@ -47,26 +66,68 @@ img {
 }
 
 .ContentWrapper {
+    // @include test;
     padding-top: 20px;
     padding-bottom: 20px;
     width: 100%;
     height: 100%;
 }
 
-#aboutImg {
-    // margin: auto 0;
-    position: relative;
-    // top: 70%;
-    // margin-top: 20px;
-    // top: 30% !important;
+.section {
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    border-bottom: solid 1px #aaa;
+	// text-align: center;
 }
 
-#title {
-    border-bottom: 1px solid #aaa;
-    width: 30%;
-    margin: 0 auto;
+.submitButton {
+	margin-top: 30px;
+	// padding: 10px;
+	// margin: 0 auto;
+    font: {
+        size: 15px;
+        weight: bold;
+    }
+    &:after {
+        content: "CONTACT ME";
+    }
 }
+
+#contactSection{
+	text-align: center;
+	border: none;
+	padding-bottom: 20px;
+}
+
 
 #aboutText {
     border-bottom: solid 1px #aaa;
+    padding-bottom: 30px;
+}
+
+#funFactsText {
+    margin-top: 30px;
+    // padding-top: 30px;
+}
+
+#skillContent {
+    // margin: 0 auto;
+    margin: 20px 0;
+}
+
+#educationContent {
+    text-align: center;
+    h3 {
+        font-size: 20pt;
+    }
+    p {
+    	// @include test;
+    	text-align: center;
+        font-size: 15pt;
+        color: rgba(26, 26, 26, 0.6);
+
+    }
+    .studyPlace {
+        padding-bottom: 30px;
+    }
 }
