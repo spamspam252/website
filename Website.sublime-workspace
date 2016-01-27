@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"fun",
+				"funFactsText"
+			],
+			[
+				"impor",
+				"important"
+			],
+			[
 				"bor",
 				"border"
 			],
@@ -106,10 +114,6 @@
 			[
 				"tog",
 				"toggleClass	(?)"
-			],
-			[
-				"impor",
-				"important"
 			],
 			[
 				"slide",
@@ -252,6 +256,54 @@
 	"buffers":
 	[
 		{
+			"file": "jade/BlogIndex.jade",
+			"settings":
+			{
+				"buffer_size": 806,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "jade/includes/Newsletter.jade",
+			"settings":
+			{
+				"buffer_size": 249,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sass/includes/Contact.scss",
+			"settings":
+			{
+				"buffer_size": 685,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sass/includes/Global.scss",
+			"settings":
+			{
+				"buffer_size": 4682,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/script.js",
+			"settings":
+			{
+				"buffer_size": 8931,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sass/includes/Footer.scss",
+			"settings":
+			{
+				"buffer_size": 1318,
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "jade/index.jade",
 			"settings":
 			{
@@ -260,26 +312,34 @@
 			}
 		},
 		{
-			"file": "jade/AboutIndex.jade",
+			"file": "jade/includes/FixedMenu.jade",
 			"settings":
 			{
-				"buffer_size": 2651,
+				"buffer_size": 719,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "jade/includes/global.jade",
+			"file": "sass/includes/FixedMenu.scss",
 			"settings":
 			{
-				"buffer_size": 273,
+				"buffer_size": 4239,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "sass/includes/Global.scss",
+			"file": "sass/sections.scss",
 			"settings":
 			{
-				"buffer_size": 4481,
+				"buffer_size": 5020,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Bootstrap/bootstrap-3.3.6-dist/css/bootstrap.css",
+			"settings":
+			{
+				"buffer_size": 146082,
 				"line_ending": "Unix"
 			}
 		},
@@ -288,14 +348,6 @@
 			"settings":
 			{
 				"buffer_size": 1466,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "sass/sections.scss",
-			"settings":
-			{
-				"buffer_size": 2039,
 				"line_ending": "Unix"
 			}
 		}
@@ -307,28 +359,28 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 127.0,
-		"last_filter": "git push",
+		"height": 287.0,
+		"last_filter": "git pus",
 		"selected_items":
 		[
 			[
-				"git push",
+				"git pus",
 				"Git: Push"
 			],
 			[
-				"git comi",
-				"Git: Commit"
+				"gitco",
+				"Git: Quick Commit"
 			],
 			[
 				"git ad",
 				"Git: Add All"
 			],
 			[
-				"Git pus",
+				"git push",
 				"Git: Push"
 			],
 			[
-				"git com",
+				"git co",
 				"Git: Quick Commit"
 			],
 			[
@@ -336,16 +388,20 @@
 				"Git: Add All"
 			],
 			[
-				"git add",
-				"Git: Add All"
-			],
-			[
-				"git co",
+				"git com",
 				"Git: Quick Commit"
 			],
 			[
-				"git pus",
+				"git comi",
+				"Git: Commit"
+			],
+			[
+				"Git pus",
 				"Git: Push"
+			],
+			[
+				"git add",
+				"Git: Add All"
 			],
 			[
 				"git comt",
@@ -460,7 +516,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 467.0
+		"width": 428.0
 	},
 	"console":
 	{
@@ -486,48 +542,50 @@
 		"/Users/vunguyenhung/Public/OneDrive/WebProject/MyWebsite/website",
 		"/Users/vunguyenhung/Public/OneDrive/WebProject/MyWebsite/website/css",
 		"/Users/vunguyenhung/Public/OneDrive/WebProject/MyWebsite/website/img",
-		"/Users/vunguyenhung/Public/OneDrive/WebProject/MyWebsite/website/sass"
+		"/Users/vunguyenhung/Public/OneDrive/WebProject/MyWebsite/website/jade",
+		"/Users/vunguyenhung/Public/OneDrive/WebProject/MyWebsite/website/sass",
+		"/Users/vunguyenhung/Public/OneDrive/WebProject/MyWebsite/website/sass/includes"
 	],
 	"file_history":
 	[
+		"/Users/vunguyenhung/Public/OneDrive/WebProject/MyWebsite/website/sass/includes/Newsletter.scss",
+		"/Users/vunguyenhung/Public/OneDrive/WebProject/MyWebsite/website/jade/includes/Contact.jade",
+		"/Users/vunguyenhung/Public/OneDrive/WebProject/MyWebsite/website/jade/AboutIndex.jade",
+		"/Users/vunguyenhung/Public/OneDrive/WebProject/MyWebsite/website/jade/PortfolioIndex.jade",
+		"/Users/vunguyenhung/Public/OneDrive/WebProject/MyWebsite/website/Bootstrap/bootstrap-3.3.6-dist/css/bootstrap.css",
+		"/Users/vunguyenhung/Public/OneDrive/WebProject/MyWebsite/website/jade/ContactIndex.jade",
+		"/Users/vunguyenhung/Public/OneDrive/WebProject/MyWebsite/website/sass/main.scss",
 		"/Users/vunguyenhung/Public/OneDrive/WebProject/MyWebsite/website/jade/includes/About.jade",
-		"/Users/vunguyenhung/Public/OneDrive/WebProject/MyWebsite/website/jade/includes/Gallery.jade",
-		"/Users/vunguyenhung/Public/OneDrive/WebProject/MyWebsite/website/About/index.html",
+		"/Users/vunguyenhung/Public/OneDrive/WebProject/MyWebsite/website/jade/index.jade",
 		"/Users/vunguyenhung/Public/OneDrive/WebProject/MyWebsite/website/sass/includes/Portfolio.scss",
 		"/Users/vunguyenhung/Public/OneDrive/WebProject/MyWebsite/website/jade/includes/Portfolio.jade",
-		"/Users/vunguyenhung/Public/OneDrive/WebProject/MyWebsite/website/sass/includes/Newsletter.scss",
+		"/Users/vunguyenhung/Public/OneDrive/WebProject/MyWebsite/website/sass/includes/Global.scss",
+		"/Users/vunguyenhung/Public/OneDrive/WebProject/MyWebsite/website/sass/includes/button.scss",
+		"/Users/vunguyenhung/Public/OneDrive/WebProject/MyWebsite/website/jade/includes/global.jade",
+		"/Users/vunguyenhung/Public/OneDrive/WebProject/MyWebsite/website/jade/includes/Gallery.jade",
+		"/Users/vunguyenhung/Public/OneDrive/WebProject/MyWebsite/website/About/index.html",
 		"/Users/vunguyenhung/Public/OneDrive/WebProject/MyWebsite/website/jade/includes/Footer.jade",
 		"/Users/vunguyenhung/Public/OneDrive/WebProject/MyWebsite/website/js/script.js",
-		"/Users/vunguyenhung/Public/OneDrive/WebProject/MyWebsite/website/Bootstrap/bootstrap-3.3.6-dist/css/bootstrap.css",
 		"/Users/vunguyenhung/Public/OneDrive/WebProject/MyWebsite/website/sass/includes/Container.scss",
-		"/Users/vunguyenhung/Public/OneDrive/WebProject/MyWebsite/website/sass/includes/Global.scss",
-		"/Users/vunguyenhung/Public/OneDrive/WebProject/MyWebsite/website/jade/index.jade",
 		"/Users/vunguyenhung/Public/OneDrive/WebProject/MyWebsite/website/jade/includes/Blog.jade",
 		"/Users/vunguyenhung/Public/OneDrive/WebProject/MyWebsite/website/sass/includes/Body.scss",
 		"/Users/vunguyenhung/Public/OneDrive/WebProject/MyWebsite/website/sass/includes/Title.scss",
 		"/Users/vunguyenhung/Public/OneDrive/WebProject/MyWebsite/website/jade/includes/Newsletter.jade",
-		"/Users/vunguyenhung/Public/OneDrive/WebProject/MyWebsite/website/jade/includes/Contact.jade",
 		"/Users/vunguyenhung/Public/OneDrive/WebProject/MyWebsite/website/sass/includes/Contact.scss",
 		"/Users/vunguyenhung/Public/OneDrive/WebProject/MyWebsite/website/sass/includes/Blog.scss",
-		"/Users/vunguyenhung/Public/OneDrive/WebProject/MyWebsite/website/jade/includes/global.jade",
 		"/Users/vunguyenhung/Public/OneDrive/WebProject/MyWebsite/website/sass/includes/FixedMenu.scss",
 		"/Users/vunguyenhung/Public/OneDrive/WebProject/MyWebsite/website/jade/includes/FixedMenu.jade",
 		"/Users/vunguyenhung/Public/OneDrive/WebProject/MyWebsite/website/Bootstrap/bootstrap-3.3.6-dist/js/bootstrap.js",
 		"/Users/vunguyenhung/Public/OneDrive/WebProject/MyWebsite/website/sass/includes/Gallery.scss",
 		"/Users/vunguyenhung/Public/OneDrive/WebProject/MyWebsite/website/css/sidebar.css",
-		"/Users/vunguyenhung/Public/OneDrive/WebProject/MyWebsite/website/sass/main.scss",
 		"/Users/vunguyenhung/Public/OneDrive/WebProject/MyWebsite/website/css/main.css",
 		"/Users/vunguyenhung/Public/OneDrive/WebProject/MyWebsite/website/sass/includes/Sidebar.scss",
-		"/Users/vunguyenhung/Public/OneDrive/WebProject/MyWebsite/website/sass/includes/button.scss",
 		"/Users/vunguyenhung/Public/OneDrive/WebProject/MyWebsite/website/index.html",
 		"/Users/vunguyenhung/Public/OneDrive/WebProject/MyWebsite/website/Bootstrap/style.scss",
 		"/Users/vunguyenhung/Public/OneDrive/WebProject/MyWebsite/website/Bootstrap/forms.html",
 		"/Users/vunguyenhung/Public/OneDrive/WebProject/MyWebsite/website/Bootstrap/forms.jade",
 		"/Users/vunguyenhung/Public/OneDrive/WebProject/MyWebsite/website/Bootstrap/test.jade",
-		"/Users/vunguyenhung/Public/OneDrive/WebProject/MyWebsite/website/jade/ContactIndex.jade",
 		"/Users/vunguyenhung/Public/OneDrive/WebProject/MyWebsite/website/jade/BlogIndex.jade",
-		"/Users/vunguyenhung/Public/OneDrive/WebProject/MyWebsite/website/jade/PortfolioIndex.jade",
-		"/Users/vunguyenhung/Public/OneDrive/WebProject/MyWebsite/website/jade/AboutIndex.jade",
 		"/Users/vunguyenhung/Public/OneDrive/WebProject/MyWebsite/website/sass/includes/About.scss",
 		"/Users/vunguyenhung/Public/OneDrive/WebProject/MyWebsite/website/sass/includes/Footer.scss",
 		"/Users/vunguyenhung/Public/OneDrive/WebProject/MyWebsite/website/html/index.html",
@@ -624,6 +682,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"ease",
+			"991",
+			"h2",
+			"200px",
 			"$gray",
 			"$black",
 			"#aaa",
@@ -691,11 +753,188 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 4,
 			"sheets":
 			[
 				{
 					"buffer": 0,
+					"file": "jade/BlogIndex.jade",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 806,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								659,
+								659
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 48.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "jade/includes/Newsletter.jade",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 249,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								103,
+								103
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "sass/includes/Contact.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 685,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								574,
+								574
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 93.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "sass/includes/Global.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4682,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1090,
+								1090
+							]
+						],
+						"settings":
+						{
+							"history_list_is_closing": true,
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 608.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "js/script.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8931,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2299,
+								2299
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JavaScriptNext.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 79.0,
+						"translation.y": 1149.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "sass/includes/Footer.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1318,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								584,
+								584
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 288.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
 					"file": "jade/index.jade",
 					"semi_transient": false,
 					"settings":
@@ -707,8 +946,8 @@
 						"selection":
 						[
 							[
-								1286,
-								1286
+								427,
+								427
 							]
 						],
 						"settings":
@@ -717,67 +956,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 463.0,
+						"translation.y": 401.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "jade/AboutIndex.jade",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2651,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2004,
-								2004
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 1716.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "jade/includes/global.jade",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 273,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
+					"stack_index": 5,
 					"type": "text"
 				}
 			]
@@ -792,15 +974,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4481,
+						"buffer_size": 4682,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3352,
-								3352
+								3193,
+								3193
 							]
 						],
 						"settings":
@@ -811,14 +993,132 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1456.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 7,
+					"file": "jade/includes/FixedMenu.jade",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 719,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								433,
+								433
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "sass/includes/FixedMenu.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4239,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								356,
+								356
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 111.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "sass/sections.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5020,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2136,
+								2136
+							]
+						],
+						"settings":
+						{
+							"_anf_new": "",
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1594.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "Bootstrap/bootstrap-3.3.6-dist/css/bootstrap.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 146082,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								143045,
+								143093
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS3/CSS3.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 98841.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
 					"file": "sass/includes/button.scss",
 					"semi_transient": false,
 					"settings":
@@ -830,8 +1130,8 @@
 						"selection":
 						[
 							[
-								1303,
-								1303
+								0,
+								0
 							]
 						],
 						"settings":
@@ -840,40 +1140,41 @@
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 3.0,
-						"translation.y": 662.0,
+						"translation.x": 0.0,
+						"translation.y": 98.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 12,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "sass/sections.scss",
+					"buffer": 2,
+					"file": "sass/includes/Contact.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2039,
+						"buffer_size": 685,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1975,
-								1975
+								145,
+								145
 							]
 						],
 						"settings":
 						{
-							"_anf_new": "",
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1606.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 13,
 					"type": "text"
 				}
 			]
@@ -939,8 +1240,72 @@
 		"selected_items":
 		[
 			[
+				"fix",
+				"sass/includes/FixedMenu.scss"
+			],
+			[
+				"fi",
+				"jade/includes/FixedMenu.jade"
+			],
+			[
+				"scrip",
+				"js/script.js"
+			],
+			[
+				"inde",
+				"jade/index.jade"
+			],
+			[
+				"glo",
+				"sass/includes/Global.scss"
+			],
+			[
+				"news",
+				"sass/includes/Newsletter.scss"
+			],
+			[
+				"con",
+				"jade/includes/Contact.jade"
+			],
+			[
+				"boot",
+				"Bootstrap/bootstrap-3.3.6-dist/css/bootstrap.css"
+			],
+			[
+				"pro",
+				"jade/PortfolioIndex.jade"
+			],
+			[
 				"button",
 				"sass/includes/button.scss"
+			],
+			[
+				"footer",
+				"sass/includes/Footer.scss"
+			],
+			[
+				"main",
+				"sass/main.scss"
+			],
+			[
+				"conta",
+				"jade/includes/Contact.jade"
+			],
+			[
+				"about",
+				"jade/AboutIndex.jade"
+			],
+			[
+				"ab",
+				"jade/includes/About.jade"
+			],
+			[
+				"blog",
+				"jade/BlogIndex.jade"
+			],
+			[
+				"port",
+				"sass/includes/Portfolio.scss"
 			],
 			[
 				"gl",
@@ -951,10 +1316,6 @@
 				"jade/includes/Gallery.jade"
 			],
 			[
-				"about",
-				"jade/includes/About.jade"
-			],
-			[
 				"index",
 				"jade/index.jade"
 			],
@@ -963,27 +1324,11 @@
 				"jade/includes/Footer.jade"
 			],
 			[
-				"news",
-				"sass/includes/Newsletter.scss"
-			],
-			[
 				"prot",
 				"sass/includes/Portfolio.scss"
 			],
 			[
-				"glo",
-				"sass/includes/Global.scss"
-			],
-			[
 				"contain",
-				"sass/includes/Container.scss"
-			],
-			[
-				"boot",
-				"Bootstrap/bootstrap-3.3.6-dist/css/bootstrap.css"
-			],
-			[
-				"conta",
 				"sass/includes/Container.scss"
 			],
 			[
@@ -993,14 +1338,6 @@
 			[
 				"gal",
 				"jade/includes/Gallery.jade"
-			],
-			[
-				"port",
-				"sass/includes/Portfolio.scss"
-			],
-			[
-				"blog",
-				"jade/includes/Blog.jade"
 			],
 			[
 				"body",
@@ -1059,40 +1396,16 @@
 				"jade/includes/Portfolio.jade"
 			],
 			[
-				"con",
-				"jade/includes/Contact.jade"
-			],
-			[
 				"contan",
 				"sass/includes/Container.scss"
-			],
-			[
-				"inde",
-				"jade/index.jade"
 			],
 			[
 				"abou",
 				"jade/includes/About.jade"
 			],
 			[
-				"fi",
-				"jade/includes/FixedMenu.jade"
-			],
-			[
-				"fix",
-				"jade/includes/FixedMenu.jade"
-			],
-			[
-				"main",
-				"sass/main.scss"
-			],
-			[
 				"fx",
 				"sass/includes/FixedMenu.scss"
-			],
-			[
-				"scrip",
-				"js/script.js"
 			],
 			[
 				"side",
@@ -1133,10 +1446,6 @@
 			[
 				"p",
 				"jade/includes/Portfolio.jade"
-			],
-			[
-				"footer",
-				"jade/includes/Footer.jade"
 			],
 			[
 				"contac",
@@ -1227,7 +1536,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 0,
+	"selected_group": 1,
 	"settings":
 	{
 	},

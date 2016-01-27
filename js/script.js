@@ -27,12 +27,21 @@ $(function() {
                 // $('body').addClass('bodyPhone');
 
 
-                $('#aboutNav a').attr("href","About");
-                $('#portfolioNav a').attr("href","Portfolio");
-                $('#blogNav a').attr("href","Blog");
-                $('#contactNav a').attr("href","Contact");
+                $('#aboutNav a').attr("href", "About");
+                $('#portfolioNav a').attr("href", "Portfolio");
+                $('#blogNav a').attr("href", "Blog");
+                $('#contactNav a').attr("href", "Contact");
                 // $('#logoContent').addClass("logoPhone");
-                
+
+                // $("#navigation").on('show.bs.collapse', function() {
+                //     console.log("asd");
+                //     $('.menuPhone').attr({
+                //         'background-color': 'rgba(245, 246, 255, 0.8)'
+                //     });
+                // })
+
+
+
             }
 
             // Executes in XS and SM breakpoints

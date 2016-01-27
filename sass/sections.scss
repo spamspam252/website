@@ -65,29 +65,51 @@ h2 {
     // margin-bottom: 20px
 }
 
-@media (max-width: 991px){
-	h2#funFactsText{
-		font-size: 10pt;
-	}
-	ul{
-		li{
-			font-size: 18pt !important;
-
-		}
-	}
-	#educationContent{
-		h3{
-			font-size: 10pt !important;
-		}
-		p{
-			font-size: 17pt !important;
-		}
-	}
-	#contactPlace{
-		h3{
-			font-size: 14pt;
-		}
-	}
+@media (max-width: 991px) {
+    h2#funFactsText {
+        font-size: 10pt;
+    }
+    ul {
+        li {
+            font-size: 18pt !important;
+        }
+    }
+    #educationContent {
+        h3 {
+            font-size: 10pt !important;
+        }
+        p {
+            font-size: 17pt !important;
+        }
+    }
+    #contactPlace {
+        h3 {
+            font-size: 14pt;
+        }
+    }
+    #articleSection {
+        h1{
+            font-size: 60px;
+        }
+        .Article {
+            h2{
+                font-size: 60px;
+            }
+            small{
+                font-size: 25px;
+            }
+            p {
+                font-size: 14px;
+                line-height: 1.2;
+            }
+            a{
+                font-size: 13px;
+                span{
+                    vertical-align: -5px;
+                }
+            }
+        }
+    }
 }
 
 img {
@@ -278,6 +300,55 @@ footer {
                     height: 100%;
                 }
             }
+        }
+    }
+} // END FOOTER
+.Article {
+    padding-top: 20px;
+    // padding-bottom: 20px;
+    .ArticleTitle-expand,
+    .ArticleTitle-collapse {
+        margin-bottom: 10px;
+        h2 {
+            margin-bottom: 0;
+            font-size: 25pt;
+            // padding-bottom: 0;
+        }
+        small {
+            font-size: 10pt;
+            color: #9197a3;
+            // margin-top: 0;
+            // padding-top: 0;
+        }
+        p {
+            font-size: 14pt;
+        }
+    }
+    .ArticleText-expand,
+    .ArticleText-collapse {
+        position: relative;
+        a {
+            font-weight: bold;
+            font-size: 12pt;
+            // border-bottom: solid 1px #aaa;
+            transition: all 0.3s ease-in-out 0s;
+            color: $dark-blue;
+            &:hover {
+                left: 5px;
+                // transition: all 0.3s ease-in-out 0s;
+                // transform: translate(5px,10px);
+            }
+        }
+        span {
+            // border-bottom: none !important;
+            vertical-align: -2px;
+        }
+    }
+    .BlogImage {
+        img {
+            // height: 50%;
+            // width: 50%;
+            // height: 400px;
         }
     }
 }

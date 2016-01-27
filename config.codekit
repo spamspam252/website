@@ -635,6 +635,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/articleimg1.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2.17108e+06,
+		"inputAbbreviatedPath": "\/img\/articleimg1.jpg",
+		"outputAbbreviatedPath": "\/img\/articleimg1.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/BussinessCard.png": {
 		"fileType": 32768,
 		"ignore": 0,
