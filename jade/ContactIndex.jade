@@ -2,6 +2,50 @@ doctype html
 html
 	head
 		meta(charset="UTF-8")
-		title Contact
+		title Say Hello
+		link(rel="stylesheet", href="js/jquery-ui-1.11.4/jquery-ui.min.css")
+		
+		//- FULL PAGE
+		//- link(rel="stylesheet", href="js/fullPage.js-master/jquery.fullPage.css")
+		
+		//- BOOTSTRAP
+		link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous")
+		
+		//- link(rel="stylesheet" href="/Bootstrap/bootstrap-3.3.6-dist/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous")
+
+		//- MAIN
+		link(rel="stylesheet", href="css/sections.css")
+
+		link(rel="icon", href="img/chuki.png", type="image/x-icon")
 	body
-		h1 Contact !!!!
+		.container-fluid
+			.row
+				h1 SEND A FRIENDLY HELLO
+			#contactSection.ContentWrapper
+				h2 CONTACT INFOMATION
+				.section
+					.row
+						p.col-md-8.col-sm-8
+							strong Vũ Nguyên Hưng
+							br
+							|District 8, Ho Chi Minh City
+							br
+							strong 090.807.6542
+							br
+							|vunguyenhung.twd@gmail.com
+							br
+							a(href="")
+								button.submitButton
+						img(src="../img/BussinessCard.png", alt="").col-md-4.col-sm-4
+				.section#contactSection
+					.row#contactContent
+						h2 SEND A FRIENDLY HELLO
+						form#formContact
+							label(for="formName") Name: *
+							input(type="text")#formName
+							label(for="formEmail") Email: *
+							input(type="email")#formEmail
+							label(for="formMessage") Message: *
+							textarea#formMessage(name="", cols="30", rows="10" )
+							button#submitMessage(type="button").submitButton
+			include includes/Footer.jade

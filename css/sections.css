@@ -1,3 +1,9 @@
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
 @font-face {
   font-family: 'Hero';
   /*a name to be used later*/
@@ -210,6 +216,36 @@ footer #footerContent {
       background-image: url("../img/LinkedIn.png");
       background-size: 100%; }
 
+#contactSection #contactContent {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15px; }
+  #contactSection #contactContent::after {
+    clear: both;
+    content: "";
+    display: table; }
+  #contactSection #contactContent #formContact label {
+    font-family: 'Hero'; }
+  #contactSection #contactContent #formContact input[type="text"],
+  #contactSection #contactContent #formContact input[type="email"],
+  #contactSection #contactContent #formContact textarea {
+    font-family: 'Hero';
+    padding: 12px;
+    box-sizing: border-box;
+    display: block;
+    border-radius: 2px;
+    border: solid 1px #445878;
+    width: 100%;
+    background: #ECECF5;
+    font-size: 12pt;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    resize: none; }
+  #contactSection #contactContent #formContact input[type="text"]:focus,
+  #contactSection #contactContent #formContact input[type="email"]:focus {
+    background: #F1F1FA; }
+
 @font-face {
   font-family: 'Hero';
   /*a name to be used later*/
@@ -235,6 +271,20 @@ h2 {
   padding-top: 0;
   margin-top: 0; }
 
+@media (max-width: 991px) {
+  h2#funFactsText {
+    font-size: 10pt; }
+
+  ul li {
+    font-size: 18pt !important; }
+
+  #educationContent h3 {
+    font-size: 10pt !important; }
+  #educationContent p {
+    font-size: 17pt !important; }
+
+  #contactPlace h3 {
+    font-size: 14pt; } }
 img {
   width: 100%;
   height: 100%; }
@@ -258,7 +308,7 @@ ul {
 .section {
   padding-bottom: 30px;
   margin-bottom: 30px;
-  border-bottom: solid 1px #aaa; }
+  border-bottom: solid 1px #aaa !important; }
 
 .submitButton {
   margin-top: 30px;
@@ -267,10 +317,10 @@ ul {
   .submitButton:after {
     content: "CONTACT ME"; }
 
-#contactSection {
+#contactPlace {
   text-align: center;
   border: none;
-  padding-bottom: 20px; }
+  padding-bottom: 40px; }
 
 #aboutText {
   border-bottom: solid 1px #aaa;
@@ -317,3 +367,63 @@ ul {
   transition: all 0.3s ease-in-out 0s; }
   .PortfolioLogo:hover {
     transform: scale(1.5, 1.5); }
+
+#contactSection {
+  padding-bottom: 0; }
+  #contactSection p {
+    font-size: 13pt;
+    line-height: 2; }
+  #contactSection h2 {
+    text-align: center;
+    margin-bottom: 30px; }
+  #contactSection .submitButton {
+    width: 200px; }
+    #contactSection .submitButton:after {
+      content: "DOWNLOAD RESUME"; }
+
+#formContact {
+  text-align: left; }
+  #formContact label {
+    font-family: 'Hero';
+    font-size: 15pt;
+    font-weight: normal; }
+  #formContact input[type="text"],
+  #formContact input[type="email"],
+  #formContact textarea {
+    font-family: 'Hero';
+    padding: 12px;
+    box-sizing: border-box;
+    display: block;
+    border-radius: 2px;
+    border: solid 1px #445878;
+    width: 100%;
+    background: #ECECF5;
+    font-size: 12pt;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    resize: none; }
+  #formContact input[type="text"]:focus,
+  #formContact input[type="email"]:focus {
+    background: #F1F1FA; }
+  #formContact .submitButton {
+    width: 130px;
+    margin-top: 0; }
+    #formContact .submitButton:after {
+      content: "SUBMIT"; }
+
+footer #footerContent {
+  margin-bottom: 0;
+  width: 100%;
+  height: 30px; }
+  footer #footerContent ul {
+    float: left; }
+    footer #footerContent ul li {
+      width: 30px;
+      height: 30px;
+      display: inline-block;
+      margin-right: 15px !important;
+      margin-left: 0; }
+      footer #footerContent ul li a {
+        display: inline-block;
+        width: 100%;
+        height: 100%; }
