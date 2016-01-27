@@ -1,4 +1,5 @@
 @import "includes/button";
+@import "includes/footer";
 $white: #EEEFF7;
 $blue: #92CDCF;
 $dark-blue: #445878;
@@ -6,6 +7,22 @@ $gray: #31353D;
 $black: #1C1D21;
 @mixin test($color:red) {
     border: solid 1px $color;
+}
+
+@mixin ImageBlock {
+    // @include test;
+    width: 300px;
+    height: 300px;
+    display: inline-block;
+    // margin: 0 auto !important;
+    //4px margin bottom
+}
+
+@mixin setIconBackground($src) {
+    background-image: url($src);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
 }
 
 @font-face {
@@ -17,11 +34,12 @@ $black: #1C1D21;
 
 * {
     font-family: 'Hero';
-    font-size: 25pt;
+    // font-size: 25pt;
 }
 
 body {
     background-color: $white;
+    // height: 100%;
 }
 
 h1 {
@@ -77,13 +95,13 @@ ul {
     padding-bottom: 30px;
     margin-bottom: 30px;
     border-bottom: solid 1px #aaa;
-	// text-align: center;
+    // text-align: center;
 }
 
 .submitButton {
-	margin-top: 30px;
-	// padding: 10px;
-	// margin: 0 auto;
+    margin-top: 30px;
+    // padding: 10px;
+    // margin: 0 auto;
     font: {
         size: 15px;
         weight: bold;
@@ -93,12 +111,11 @@ ul {
     }
 }
 
-#contactSection{
-	text-align: center;
-	border: none;
-	padding-bottom: 20px;
+#contactSection {
+    text-align: center;
+    border: none;
+    padding-bottom: 20px;
 }
-
 
 #aboutText {
     border-bottom: solid 1px #aaa;
@@ -121,13 +138,37 @@ ul {
         font-size: 20pt;
     }
     p {
-    	// @include test;
-    	text-align: center;
+        // @include test;
+        text-align: center;
         font-size: 15pt;
         color: rgba(26, 26, 26, 0.6);
-
     }
     .studyPlace {
         padding-bottom: 30px;
+    }
+}
+
+#portfolioSection {
+	text-align: center;
+	margin-bottom: 50px;
+    h2 {
+        text-align: center;
+        padding-top: 20px;
+    }
+    p {
+        text-align: center;
+        font-size: 12pt;
+        color: rgba(26, 26, 26, 0.6);
+    }
+}
+.PortfolioLogo {
+    @include ImageBlock;
+    @include setIconBackground("../img/BussinessCard.png");
+    position: relative;
+    margin: 0 auto !important;
+    transition: all 0.3s ease-in-out 0s;
+    // padding: 50px 0 !important;
+    &:hover {
+        transform: scale(1.5, 1.5);
     }
 }
