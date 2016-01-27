@@ -57,7 +57,13 @@
 @font-face {
     font-family: 'Hero';
     /*a name to be used later*/
-    src: url('../font/Hero.ttf');
+    src: url('../font/Hero.woff');
+    // src: url('../font/Hero.ttf');
+
+    // src: url(‘Hero.ttf?#iefix’) format(’embedded-opentype’),
+    // url(‘Hero.ttf’) format(‘truetype’),
+    // url(‘Hero.woff’) format(‘woff’);
+    
     /*URL to font*/
 }
 
@@ -69,7 +75,7 @@ h2 {
 }
 
 p {
-    font-family: 'Hero';
+    font-family: 'Hero', Helvetia;
     text-align: justify;
     line-height: 150%;
     width: 100%;

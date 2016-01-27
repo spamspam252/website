@@ -22,4 +22,11 @@
     }
 }
 
-
+@media (max-width: 991px) {
+    #contactContent {
+        p {
+            font-size: 8pt;
+            line-height: 1.3;
+        }
+    }
+}

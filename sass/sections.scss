@@ -142,7 +142,9 @@ ul {
 #contactPlace {
     text-align: center;
     border: none;
-    padding-bottom: 40px;
+    padding-bottom: 40px !important;
+    width: 50%;
+    margin: 40px auto 40px auto;
 }
 
 #aboutText {
@@ -246,7 +248,7 @@ ul {
         margin-top: 0;
         &:after {
             // width: 130px !important;
-            content: "SUBMIT";
+            content: "SEND";
         }
     }
 }
