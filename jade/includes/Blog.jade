@@ -1,18 +1,35 @@
+mixin articleText(text)
+	p(class="ArticleText")= text
+	a(href="") READ POST 
+		span.glyphicon.glyphicon-menu-right
+
+mixin articleTitle(title, time)
+	h2= title
+	small= time
+
+
 mixin articleContent(blogImgSrc, title, time, bodyText)
 	article.Article
-		.BlogImage
-			img(src= blogImgSrc, alt="Nope")
-		section.ArticleText
-			h2= title
-			small= time
-			p= bodyText
-	
-
+		.row
+			section.ArticleTitle-collapse.col-sm-12.visible-sm-block
+				a(href="")
+					+articleTitle(title,time)
+			.BlogImage
+				img(src= blogImgSrc, alt="Nope").col-md-4.col-sm-0
+			section.ArticleTitle-expand.col-md-8.col-sm-12.hidden-sm
+				a(href="")
+					+articleTitle(title,time)
+				.ArticleText-expand
+					+articleText(bodyText)
+			.ArticleText-collapse.visible-sm-block.col-sm-12
+				+articleText(bodyText)
 
 div#blogSection
 	+linex("Blog")
 	+sectionHeader("Blog","Blog")
 	+line
-	#blogContent
-		+articleContent("","Article Title 1", "Time", " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, quos incidunt, illum quaerat amet in ad. Unde ipsum facilis itaque similique ad, accusamus voluptates, et veniam alias facere distinctio adipisci!")
-		+articleContent("","Article Title 2", "Time", " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, quos incidunt, illum quaerat amet in ad. Unde ipsum facilis itaque similique ad, accusamus voluptates, et veniam alias facere distinctio adipisci!")
+	.container
+		#blogContent
+			+articleContent("../img/articleimg1.jpg","Article Title 1", "Time", " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, quos incidunt, illum quaerat amet in ad. Unde ipsum facilis itaque similique ad, accusamus voluptates, et veniam alias facere distinctio adipisci!  Lorem ipsum dolor sit amet, consectetur")
+			hr
+			+articleContent("../img/articleimg1.jpg","Article Title 1", "Time", " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, quos incidunt, illum quaerat amet in ad. Unde ipsum facilis itaque similique ad, accusamus voluptates, et veniam alias facere distinctio adipisci!  Lorem ipsum dolor sit amet, consectetur")

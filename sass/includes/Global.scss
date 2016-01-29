@@ -59,11 +59,9 @@
     /*a name to be used later*/
     src: url('../font/Hero.woff');
     // src: url('../font/Hero.ttf');
-
     // src: url(‘Hero.ttf?#iefix’) format(’embedded-opentype’),
     // url(‘Hero.ttf’) format(‘truetype’),
     // url(‘Hero.woff’) format(‘woff’);
-    
     /*URL to font*/
 }
 
@@ -80,6 +78,13 @@ p {
     line-height: 150%;
     width: 100%;
     margin: 15px 0;
+}
+
+hr{
+    width: 100%; 
+    color: black; 
+    height: 1px; 
+    background-color:#aaa;
 }
 
 $white: #EEEFF7;
@@ -242,4 +247,12 @@ a {
         padding-right: 0;
         padding-left: 0;
     }
+    // .BlogImage {
+    //     img {
+    //         width: 100px !important;
+    //         height: 100px !important;
+    //     }
+    //     // width: 50% !important;
+    //     // height: 50% !important;
+    // }
 }
