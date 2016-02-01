@@ -712,15 +712,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/index.html": {
-		"fileType": 8192,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/index.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
 	"\/jade\/AboutIndex.jade": {
 		"compileDebug": 1,
 		"fileType": 512,
@@ -2376,7 +2367,7 @@
 	"hamlUseDoubleQuotes": 0,
 	"hamlUseUnixNewlines": 0,
 	"jadeAutoOutputPathEnabled": 1,
-	"jadeAutoOutputPathFilenamePattern": "*.html",
+	"jadeAutoOutputPathFilenamePattern": "*.php",
 	"jadeAutoOutputPathRelativePath": "",
 	"jadeAutoOutputPathReplace1": "",
 	"jadeAutoOutputPathReplace2": "",
