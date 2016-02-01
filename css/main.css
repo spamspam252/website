@@ -732,6 +732,8 @@ a {
     clear: both;
     content: "";
     display: table; }
+  #newsLetter p {
+    margin-bottom: 0; }
   #newsLetter input[type="email"],
   #newsLetter label,
   #newsLetter button {

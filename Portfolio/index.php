@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8">
     <title>What I made</title>
-    <link rel="stylesheet" href="js/jquery-ui-1.11.4/jquery-ui.min.css">
+    <link rel="stylesheet" href="../js/jquery-ui-1.11.4/jquery-ui.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/sections.css">
-    <link rel="icon" href="img/chuki.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/sections.css">
+    <link rel="icon" href="../img/chuki.png" type="image/x-icon">
   </head>
   <body>
     <div class="container-fluid">
@@ -17,7 +17,7 @@
         <div id="porfolioLogo" class="row"><a id="logo" href="../" class="PortfolioLogo"></a></div>
       </div>
       <div id="contactPlace" class="section">
-        <h3>INTERESTED?</h3><a href="Contact">
+        <h3>INTERESTED?</h3><a href="../Contact">
           <button class="submitButton"></button></a>
       </div>
       <footer>

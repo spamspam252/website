@@ -1,14 +1,26 @@
+include ../../php/global.php
+include ../../php/contact_form.php
+include ../../php/connection.php
+include ../../php/query_database.php
+
 div(class="section fp-auto-height")#contactSection
 	+linex("Contact")
 	+sectionHeader("Contact","Contact")
 	+line
 	#contactContent
 		p Looking for a project? Send me a little information about what you're looking for and I'll be in touch!
-		form#formContact
+		form(action!="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post")#formContact
 			label(for="formName") Name: *
-			input(type="text")#formName
+			small.text-danger <?php echo "<br>".$nameError; ?>
+			input(type="text" name="contactName")#formName
 			label(for="formEmail") Email: *
-			input(type="email")#formEmail
+			small.text-danger <?php echo "<br>".$emailError; ?>
+			input(type="email" name="contactEmail")#formEmail
+			
 			label(for="formMessage") Message: *
-			textarea#formMessage(name="", cols="30", rows="10" )
-			button#submitMessage(type="button").submitButton
+			small.text-danger <?php echo "<br>".$messageError; ?>
+			textarea#formMessage(name="contactMessage", cols="30", rows="10" )
+			
+			button#submitMessage(type="submit" name="contactSubmit").submitButton
+			small.text-success <?php echo "<br>".$messageSuccess; ?>
+			small.text-danger <?php echo "<br>".$messageFailed; ?>

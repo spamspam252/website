@@ -1,7 +1,11 @@
+include ../../php/newsletter_form.php
+
 div#newsLetter
 	+line
 	p Sign up with your email address to be notified whenever I made something new !
-	form#newsLetterForm
-		label(for="formEmail") Email: 
-		input(type="email")#newsletterEmail
-		button(type="button")#submitNewsLetter.submitButton
+	small.text-success <?php echo $newsletterSuccess; ?>
+	small.text-danger <?php echo $newsletterFailed; ?>
+	form(action!="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post")#newsLetterForm
+		label(for="newsletterEmail") Email: 
+		input(type="email" name="newsletterEmail")#newsletterEmail
+		button(ype="submit" name="newsletterSubmit")#submitNewsLetter.submitButton

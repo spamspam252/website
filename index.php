@@ -130,7 +130,70 @@
             </div>
           </div>
         </div>
-        
+        <?php
+
+function validateData($data) {
+	$data = trim(stripcslashes(htmlspecialchars($data)));
+	return $data;
+}
+
+function hashPassword($password) {
+	return password_hash($password, PASSWORD_DEFAULT);
+}
+
+?><?php
+if (isset($_POST[contactSubmit])) {
+	$contact[name] = validateData($_POST[contactName]);
+	$contact[email] = validateData($_POST[contactEmail]);
+	$contact[message] = validateData($_POST[contactMessage]);
+	if (!$contact[name]) {
+		$nameError = "Please I need to know your name!";
+	}
+	if (!$contact[email]) {
+		$emailError = "I need this to reply you!";
+	}
+	if (!$contact[message]) {
+		$messageError = "Soo what do you need to say?";
+	}
+	if ($contact[name] && $contact[email] && $contact[message]) {
+		$conn = connect();
+
+		if (send_message($contact, $conn)) {
+			$messageSuccess = "Thank you! I'll reply as soon as I can!";
+			$conn->close();
+		} else {
+			$messageFailed = "Failed to send a message! Please try again later" . $conn->error;
+			$conn->close();
+		}
+
+	}
+}
+?><?php
+
+function connect() {
+	$sever = "localhost";
+	$username = "root";
+	$password = "root";
+	$db = "website";
+	$conn = new mysqli($sever, $username, $password, $db);
+	return $conn;
+}
+
+?><?php
+
+function send_message($data, $conn) {
+	$query = "INSERT INTO message (name,email,message)
+				VALUES ('$data[name]','$data[email]','$data[message]')";
+	return $conn->query($query);
+}
+
+function send_newsletter($email, $conn) {
+	$query = "INSERT INTO subscriber(email)
+	VALUES ('$email')";
+	return $conn->query($query);
+}
+
+?>
         <div id="contactSection" class="section fp-auto-height">
           <div id="Contact">
             <div class="line">
@@ -149,26 +212,43 @@
           </div>
           <div id="contactContent">
             <p>Looking for a project? Send me a little information about what you're looking for and I'll be in touch!</p>
-            <form id="formContact">
-              <label for="formName">Name: *</label>
-              <input type="text" id="formName">
-              <label for="formEmail">Email: *</label>
-              <input type="email" id="formEmail">
-              <label for="formMessage">Message: *</label>
-              <textarea id="formMessage" name="" cols="30" rows="10"></textarea>
-              <button id="submitMessage" type="button" class="submitButton"></button>
+            <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" id="formContact">
+              <label for="formName">Name: *</label><small class="text-danger"><?php echo "<br>".$nameError; ?></small>
+              <input type="text" name="contactName" id="formName">
+              <label for="formEmail">Email: *</label><small class="text-danger"><?php echo "<br>".$emailError; ?></small>
+              <input type="email" name="contactEmail" id="formEmail">
+              <label for="formMessage">Message: *</label><small class="text-danger"><?php echo "<br>".$messageError; ?></small>
+              <textarea id="formMessage" name="contactMessage" cols="30" rows="10"></textarea>
+              <button id="submitMessage" type="submit" name="contactSubmit" class="submitButton"></button><small class="text-success"><?php echo "<br>".$messageSuccess; ?></small><small class="text-danger"><?php echo "<br>".$messageFailed; ?></small>
             </form>
           </div>
-        </div>
+        </div><?php
+
+if (isset($_POST[newsletterSubmit])) {
+	$newsletter_email = validateData($_POST[newsletterEmail]);
+	if (!$newsletter_email) {
+		$newsletterFailed = "Please enter this field!";
+	} else {
+		$conn = connect();
+		if (send_newsletter($newsletter_email, $conn)) {
+			$newsletterSuccess = "Thank you very much!";
+		} else {
+			$newsletterFailed = "Cannot sign up your email right now! Please try again later!";
+		}
+		$conn->close();
+	}
+}
+
+?>
         <div id="newsLetter">
           <div class="line">
             <div class="round"></div>
           </div>
-          <p>Sign up with your email address to be notified whenever I made something new !</p>
-          <form id="newsLetterForm">
-            <label for="formEmail">Email: </label>
-            <input type="email" id="newsletterEmail">
-            <button type="button" id="submitNewsLetter" class="submitButton"></button>
+          <p>Sign up with your email address to be notified whenever I made something new !</p><small class="text-success"><?php echo $newsletterSuccess; ?></small><small class="text-danger"><?php echo $newsletterFailed; ?></small>
+          <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" id="newsLetterForm">
+            <label for="newsletterEmail">Email: </label>
+            <input type="email" name="newsletterEmail" id="newsletterEmail">
+            <button ype="submit" name="newsletterSubmit" id="submitNewsLetter" class="submitButton"></button>
           </form>
         </div>
         
