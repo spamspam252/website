@@ -8,12 +8,16 @@
             // border-bottom: solid 1px #aaa;
             .ArticleTitle-expand,
             .ArticleTitle-collapse {
-                margin-bottom: 10px;
+                // margin-bottom: 10px;
+                // margin-top: 0 !important;
+                // vertical-align: 0 !important;
                 h2 {
                     margin-bottom: 0;
                     font-size: 20pt;
                     text-align: left;
+                    margin-top: 0 ;
                     // padding-bottom: 0;
+                    // vertical-align: 15 !important;
                 }
                 small {
                     font-size: 10px;
@@ -92,6 +96,7 @@
         font-size: 40pt !important;
         left: 37% !important;
         margin-bottom: 0px;
+        // width: 100%;
     }
     p {
         font-size: 13pt !important;

@@ -1,7 +1,141 @@
-<!DOCTYPE html>
+<?php
+
+function connect() {
+	$sever = "localhost";
+	$username = "root";
+	$password = "root";
+	$db = "website";
+	$conn = new mysqli($sever, $username, $password, $db);
+	return $conn;
+}
+
+?><?php
+
+function send_message($data, $conn) {
+	$query = "INSERT INTO message (name,email,message)
+				VALUES ('$data[name]','$data[email]','$data[message]')";
+	return $conn->query($query);
+}
+
+function send_newsletter($email, $conn) {
+	$query = "INSERT INTO subscriber(email)
+	VALUES ('$email')";
+	return $conn->query($query);
+}
+
+function get_posts($conn) {
+	$query = "SELECT img,title,time,body,id FROM posts";
+	$result = $conn->query($query);
+	return $result->fetch_all();
+}
+
+function get_post($id, $conn) {
+	$query = "SELECT img, title, time, body, src_link FROM posts WHERE id='$id' ";
+	$result = $conn->query($query);
+	return $result->fetch_assoc();
+}
+
+function check_post($id, $conn) {
+	$query = "SELECT * FROM posts WHERE id='$id' ";
+	return $result = $conn->query($query);
+}
+
+?><?php
+
+function validateData($data) {
+	$data = trim(stripcslashes(htmlspecialchars($data)));
+	return $data;
+}
+
+function hashPassword($password) {
+	return password_hash($password, PASSWORD_DEFAULT);
+}
+
+function time_elapsed_string($datetime, $full = false) {
+	$now = new DateTime;
+	$ago = new DateTime($datetime);
+	$diff = $now->diff($ago);
+
+	$diff->w = floor($diff->d / 7);
+	$diff->d -= $diff->w * 7;
+
+	$string = array(
+		'y' => 'year',
+		'm' => 'month',
+		'w' => 'week',
+		'd' => 'day',
+		'h' => 'hour',
+		'i' => 'minute',
+		's' => 'second',
+	);
+	foreach ($string as $k => &$v) {
+		if ($diff->$k) {
+			$v = $diff->$k . ' ' . $v . ($diff->$k > 1 ? 's' : '');
+		} else {
+			unset($string[$k]);
+		}
+	}
+
+	if (!$full) {
+		$string = array_slice($string, 0, 1);
+	}
+
+	return $string ? implode(', ', $string) . ' ago' : 'just now';
+}
+
+?><?php
+if (isset($_POST[contactSubmit])) {
+	$contact[name] = validateData($_POST[contactName]);
+	$contact[email] = validateData($_POST[contactEmail]);
+	$contact[message] = validateData($_POST[contactMessage]);
+	if (!$contact[name]) {
+		$nameError = "Please I need to know your name!";
+	}
+	if (!$contact[email]) {
+		$emailError = "I need this to reply you!";
+	}
+	if (!$contact[message]) {
+		$messageError = "Soo what do you need to say?";
+	}
+	if ($contact[name] && $contact[email] && $contact[message]) {
+		$conn = connect();
+
+		if (send_message($contact, $conn)) {
+			$messageSuccess = "Thank you! I'll reply as soon as I can!";
+			$conn->close();
+		} else {
+			$messageFailed = "Failed to send a message! Please try again later" . $conn->error;
+			$conn->close();
+		}
+
+	}
+}
+?><?php
+$conn = connect();
+
+$conn->set_charset("utf8");
+
+$post_data = get_posts($conn);
+
+$conn->close();
+
+$count = count($post_data);
+
+$post_data = array_reverse($post_data);
+// echo "<script type='text/javascript'>alert('$count');</script>";
+
+if ($count > 2) {
+	$post_data_2last = array_slice($post_data, 0, 2);
+} else {
+	$post_data_2last = $post_data;
+}
+
+// print_r($post_data);
+
+?><!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=&quot;UTF8&quot;">
     <title>Vu Nguyen Hung</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="js/jquery-ui-1.11.4/jquery-ui.min.css">
@@ -93,24 +227,24 @@
             <div class="round"></div>
           </div>
           <div class="container">
-            <div id="blogContent">
-                      <article class="Article">
-                        <div class="row">
-                          <section class="ArticleTitle-collapse col-sm-12 visible-sm-block"><a href="">
-                                      <h2>Article Title 1</h2><small>Time</small></a></section>
-                          <div class="BlogImage"><img src="../img/articleimg1.jpg" alt="Nope" class="col-md-4 col-sm-0"></div>
-                          <section class="ArticleTitle-expand col-md-8 col-sm-12 hidden-sm"><a href="">
-                                      <h2>Article Title 1</h2><small>Time</small></a>
-                            <div class="ArticleText-expand">
-                                      <p class="ArticleText"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, quos incidunt, illum quaerat amet in ad. Unde ipsum facilis itaque similique ad, accusamus voluptates, et veniam alias facere distinctio adipisci!  Lorem ipsum dolor sit amet, consectetur</p><a href="">READ POST <span class="glyphicon glyphicon-menu-right"></span></a>
-                            </div>
-                          </section>
-                          <div class="ArticleText-collapse visible-sm-block col-sm-12">
-                                    <p class="ArticleText"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, quos incidunt, illum quaerat amet in ad. Unde ipsum facilis itaque similique ad, accusamus voluptates, et veniam alias facere distinctio adipisci!  Lorem ipsum dolor sit amet, consectetur</p><a href="">READ POST <span class="glyphicon glyphicon-menu-right"></span></a>
-                          </div>
-                        </div>
-                      </article>
-              <hr>
+            <div id="blogContent"><?php foreach ($post_data_2last as $post): ?>
+              <article class="Article">
+                <div class="row">
+                  <section class="ArticleTitle-collapse col-sm-12 visible-sm-block"><a href="<?php echo 'Blog/post.php?id='.$post[4];?>">
+                      <h2><?php echo $post[1];?></h2><small><?php echo time_elapsed_string($post[2]);?></small></a></section>
+                  <div class="BlogImage"><img src="<?php echo $post[0];?>" alt="Nope" class="col-md-4 col-sm-0"></div>
+                  <section class="ArticleTitle-expand col-md-8 col-sm-12 hidden-sm"><a href="<?php echo 'Blog/post.php?id='.$post[4];?>">
+                      <h2><?php echo $post[1];?></h2><small><?php echo time_elapsed_string($post[2]);?> </small></a>
+                    <div class="ArticleText-expand">
+                      <p class="ArticleText"><?php echo substr($post[3],0,330).'...';?></p><a href="<?php echo 'Blog/post.php?id='.$post[4];?>">READ POST<span class="glyphicon glyphicon-menu-right"></span></a>
+                    </div>
+                  </section>
+                  <div class="ArticleText-collapse visible-sm-block col-sm-12">
+                    <p class="ArticleText"><?php echo substr($post[3],0,330).'...';?></p><a href="<?php echo 'Blog/post.php?id='.$post[4];?>">READ POST <span class="glyphicon glyphicon-menu-right"></span></a>
+                  </div>
+                </div>
+              </article>
+              <hr><?php endforeach;?>
                       <article class="Article">
                         <div class="row">
                           <section class="ArticleTitle-collapse col-sm-12 visible-sm-block"><a href="">
@@ -130,70 +264,7 @@
             </div>
           </div>
         </div>
-        <?php
-
-function validateData($data) {
-	$data = trim(stripcslashes(htmlspecialchars($data)));
-	return $data;
-}
-
-function hashPassword($password) {
-	return password_hash($password, PASSWORD_DEFAULT);
-}
-
-?><?php
-if (isset($_POST[contactSubmit])) {
-	$contact[name] = validateData($_POST[contactName]);
-	$contact[email] = validateData($_POST[contactEmail]);
-	$contact[message] = validateData($_POST[contactMessage]);
-	if (!$contact[name]) {
-		$nameError = "Please I need to know your name!";
-	}
-	if (!$contact[email]) {
-		$emailError = "I need this to reply you!";
-	}
-	if (!$contact[message]) {
-		$messageError = "Soo what do you need to say?";
-	}
-	if ($contact[name] && $contact[email] && $contact[message]) {
-		$conn = connect();
-
-		if (send_message($contact, $conn)) {
-			$messageSuccess = "Thank you! I'll reply as soon as I can!";
-			$conn->close();
-		} else {
-			$messageFailed = "Failed to send a message! Please try again later" . $conn->error;
-			$conn->close();
-		}
-
-	}
-}
-?><?php
-
-function connect() {
-	$sever = "localhost";
-	$username = "root";
-	$password = "root";
-	$db = "website";
-	$conn = new mysqli($sever, $username, $password, $db);
-	return $conn;
-}
-
-?><?php
-
-function send_message($data, $conn) {
-	$query = "INSERT INTO message (name,email,message)
-				VALUES ('$data[name]','$data[email]','$data[message]')";
-	return $conn->query($query);
-}
-
-function send_newsletter($email, $conn) {
-	$query = "INSERT INTO subscriber(email)
-	VALUES ('$email')";
-	return $conn->query($query);
-}
-
-?>
+        
         <div id="contactSection" class="section fp-auto-height">
           <div id="Contact">
             <div class="line">

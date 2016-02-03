@@ -462,7 +462,8 @@ footer #footerContent {
     .Article .ArticleTitle-expand h2,
     .Article .ArticleTitle-collapse h2 {
       margin-bottom: 0;
-      font-size: 25pt; }
+      font-size: 25pt;
+      line-height: 1; }
     .Article .ArticleTitle-expand small,
     .Article .ArticleTitle-collapse small {
       font-size: 10pt;
@@ -485,3 +486,31 @@ footer #footerContent {
     .Article .ArticleText-expand span,
     .Article .ArticleText-collapse span {
       vertical-align: -2px; }
+
+#postContent #src {
+  border-bottom: solid 1px #aaa;
+  width: 60%; }
+#postContent h1 {
+  width: 100% !important;
+  border-bottom: none; }
+#postContent small {
+  font-size: 12pt;
+  color: #9197a3; }
+#postContent p {
+  text-indent: 15px;
+  font-size: 15pt; }
+  @media (max-width: 991px) {
+    #postContent p {
+      line-height: 1.5; } }
+#postContent a {
+  position: relative;
+  font-size: 14pt;
+  color: #445878; }
+  #postContent a:hover {
+    right: -5px; }
+  #postContent a span {
+    vertical-align: -2px; }
+#postContent .fbox {
+  font-weight: bold; }
+#postContent .post-img img {
+  width: 100%; }

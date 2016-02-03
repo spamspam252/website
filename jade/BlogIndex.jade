@@ -1,3 +1,8 @@
+include ../php/connection.php
+include ../php/query_database.php
+include ../php/global.php
+include ../php/blog.php
+
 mixin articleText(text)
 	p(class="ArticleText")= text
 	a(href="") READ POST 
@@ -48,8 +53,29 @@ html
 			.row
 				h1 WHAT I WROTE
 			.ContentWrapper
+				<?php foreach ($post_data as $post): ?>
 				.section
-					+articleContent("../img/articleimg1.jpg","Article Title 1", "Time", " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, quos incidunt, illum quaerat amet in ad. Unde ipsum facilis itaque similique ad, accusamus voluptates, et veniam alias facere distinctio adipisci!  Lorem ipsum dolor sit amet, consectetur")
+					article.Article
+						.row
+							section.ArticleTitle-collapse.col-sm-12.visible-sm-block
+								a(href!="<?php echo 'post.php?id='.$post[4];?>")
+									h2 <?php echo $post[1];?>
+									small <?php echo time_elapsed_string($post[2]);?>
+							.BlogImage
+								img(src!='<?php echo $post[0];?>', alt="Nope").col-md-4.col-sm-0
+							section.ArticleTitle-expand.col-md-8.col-sm-12.hidden-sm
+								a(href!="<?php echo 'post.php?id='.$post[4];?>")
+									h2 <?php echo $post[1];?>
+									small <?php echo time_elapsed_string($post[2]);?> 
+								.ArticleText-expand
+									p(class="ArticleText") <?php echo substr($post[3],0,330).'...';?>
+									a(href!="<?php echo 'post.php?id='.$post[4];?>") READ POST
+										span.glyphicon.glyphicon-menu-right
+							.ArticleText-collapse.visible-sm-block.col-sm-12
+								p(class="ArticleText") <?php echo substr($post[3],0,330).'...';?>
+								a(href!="<?php echo 'post.php?id='.$post[4];?>") READ POST 
+									span.glyphicon.glyphicon-menu-right
+				<?php endforeach;?>
 				.section
 					+articleContent("../img/articleimg1.jpg","Article Title 1", "Time", " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, quos incidunt, illum quaerat amet in ad. Unde ipsum facilis itaque similique ad, accusamus voluptates, et veniam alias facere distinctio adipisci!  Lorem ipsum dolor sit amet, consectetur")
 

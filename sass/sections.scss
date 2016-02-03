@@ -88,23 +88,23 @@ h2 {
         }
     }
     #articleSection {
-        h1{
+        h1 {
             font-size: 60px;
         }
         .Article {
-            h2{
+            h2 {
                 font-size: 60px;
             }
-            small{
+            small {
                 font-size: 25px;
             }
             p {
                 font-size: 14px;
                 line-height: 1.2;
             }
-            a{
+            a {
                 font-size: 13px;
-                span{
+                span {
                     vertical-align: -5px;
                 }
             }
@@ -309,9 +309,11 @@ footer {
     .ArticleTitle-expand,
     .ArticleTitle-collapse {
         margin-bottom: 10px;
+        // line-height: 0;
         h2 {
             margin-bottom: 0;
             font-size: 25pt;
+            line-height: 1;
             // padding-bottom: 0;
         }
         small {
@@ -352,3 +354,49 @@ footer {
         }
     }
 }
+
+#postContent{
+    #src{
+        border-bottom: solid 1px #aaa;
+        width: 60%;
+    }
+    h1{
+        width: 100% !important;
+        border-bottom: none;
+    }
+    small{
+        font-size: 12pt;
+        color: #9197a3;
+    }
+    p{
+        text-indent: 15px;
+        font-size: 15pt;
+        @media (max-width: 991px) {
+            line-height: 1.5;
+
+        }
+    }
+   a{
+        position: relative;
+        font-size: 14pt;
+        color: $dark-blue;
+        // margin-bottom: 0px !important;
+        &:hover{
+            right: -5px;
+        }
+        span{
+            vertical-align: -2px;
+        }
+    }
+    .fbox{
+        font-weight: bold;
+    }
+    .post-img{
+        img{
+                  width: 100%;  
+                  // border: solid 1px red;
+        }
+
+    }
+}
+

@@ -645,21 +645,19 @@ a {
 #blogSection #blogContent .Article {
   margin-top: 35px;
   padding-bottom: 20px; }
-  #blogSection #blogContent .Article .ArticleTitle-expand,
-  #blogSection #blogContent .Article .ArticleTitle-collapse {
-    margin-bottom: 10px; }
-    #blogSection #blogContent .Article .ArticleTitle-expand h2,
-    #blogSection #blogContent .Article .ArticleTitle-collapse h2 {
-      margin-bottom: 0;
-      font-size: 20pt;
-      text-align: left; }
-    #blogSection #blogContent .Article .ArticleTitle-expand small,
-    #blogSection #blogContent .Article .ArticleTitle-collapse small {
-      font-size: 10px;
-      color: #9197a3; }
-    #blogSection #blogContent .Article .ArticleTitle-expand p,
-    #blogSection #blogContent .Article .ArticleTitle-collapse p {
-      font-size: 14px; }
+  #blogSection #blogContent .Article .ArticleTitle-expand h2,
+  #blogSection #blogContent .Article .ArticleTitle-collapse h2 {
+    margin-bottom: 0;
+    font-size: 20pt;
+    text-align: left;
+    margin-top: 0; }
+  #blogSection #blogContent .Article .ArticleTitle-expand small,
+  #blogSection #blogContent .Article .ArticleTitle-collapse small {
+    font-size: 10px;
+    color: #9197a3; }
+  #blogSection #blogContent .Article .ArticleTitle-expand p,
+  #blogSection #blogContent .Article .ArticleTitle-collapse p {
+    font-size: 14px; }
   #blogSection #blogContent .Article .ArticleText-expand,
   #blogSection #blogContent .Article .ArticleText-collapse {
     position: relative; }
