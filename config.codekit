@@ -11,6 +11,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/Blog\/index.php": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/Blog\/index.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/Blog\/post.php": {
 		"fileType": 8192,
 		"ignore": 1,
@@ -719,6 +728,17 @@
 		"initialSize": 152932,
 		"inputAbbreviatedPath": "\/img\/post-01.jpg",
 		"outputAbbreviatedPath": "\/img\/post-01.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/post-02.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 46684,
+		"inputAbbreviatedPath": "\/img\/post-02.jpg",
+		"outputAbbreviatedPath": "\/img\/post-02.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0

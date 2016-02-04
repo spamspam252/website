@@ -13,7 +13,7 @@ function send_newsletter($email, $conn) {
 }
 
 function get_posts($conn) {
-	$query = "SELECT img,title,time,body,id FROM posts";
+	$query = "SELECT img,title,time,body,id,little_body FROM posts";
 	$result = $conn->query($query);
 	return $result->fetch_all();
 }
@@ -26,7 +26,14 @@ function get_post($id, $conn) {
 
 function check_post($id, $conn) {
 	$query = "SELECT * FROM posts WHERE id='$id' ";
-	return $result = $conn->query($query);
+	$result = $conn->query($query);
+	$row = $result->num_rows;
+	if ($row >= 1) {
+		return true;
+	} else {
+		return false;
+	}
+
 }
 
 ?>

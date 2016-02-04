@@ -29,14 +29,14 @@ html
 				small <?php echo time_elapsed_string($post_data[time]);?> 
 				img(src!="<?php echo $post_data[img]?>", alt="Nope")
 			.row#src
-				p Bài viết này được dịch lại từ blog <a href="<?php echo $post_data[src_link];?>"> Joel On Software.</a>		
+				p Bài viết này được dịch lại từ <a href="<?php echo $post_data[src_link];?>"> <?php echo $host;?> </a>		
 			.row.text-justify
 				p <?php echo $post_data[body];?>
-			<?php if(!$check): ?>
+			<?php if($check): ?>
 			.row.text-right
 				a(href!="<?php echo 'post.php?id='.$id2; ?>")#next NEXT POST 
 					span.glyphicon.glyphicon-menu-right
-			<?php endif;?>	
+			<?php endif;?>
 
 					
 

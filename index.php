@@ -24,7 +24,7 @@ function send_newsletter($email, $conn) {
 }
 
 function get_posts($conn) {
-	$query = "SELECT img,title,time,body,id FROM posts";
+	$query = "SELECT img,title,time,body,id,little_body FROM posts";
 	$result = $conn->query($query);
 	return $result->fetch_all();
 }
@@ -236,31 +236,14 @@ if ($count > 2) {
                   <section class="ArticleTitle-expand col-md-8 col-sm-12 hidden-sm"><a href="<?php echo 'Blog/post.php?id='.$post[4];?>">
                       <h2><?php echo $post[1];?></h2><small><?php echo time_elapsed_string($post[2]);?> </small></a>
                     <div class="ArticleText-expand">
-                      <p class="ArticleText"><?php echo substr($post[3],0,330).'...';?></p><a href="<?php echo 'Blog/post.php?id='.$post[4];?>">READ POST<span class="glyphicon glyphicon-menu-right"></span></a>
+                      <p class="ArticleText"><?php echo $post[5];?></p><a href="<?php echo 'Blog/post.php?id='.$post[4];?>">READ POST<span class="glyphicon glyphicon-menu-right"></span></a>
                     </div>
                   </section>
                   <div class="ArticleText-collapse visible-sm-block col-sm-12">
-                    <p class="ArticleText"><?php echo substr($post[3],0,330).'...';?></p><a href="<?php echo 'Blog/post.php?id='.$post[4];?>">READ POST <span class="glyphicon glyphicon-menu-right"></span></a>
+                    <p class="ArticleText"><?php echo $post[5];?></p><a href="<?php echo 'Blog/post.php?id='.$post[4];?>">READ POST <span class="glyphicon glyphicon-menu-right"></span></a>
                   </div>
                 </div>
-              </article>
-              <hr><?php endforeach;?>
-                      <article class="Article">
-                        <div class="row">
-                          <section class="ArticleTitle-collapse col-sm-12 visible-sm-block"><a href="">
-                                      <h2>Article Title 1</h2><small>Time</small></a></section>
-                          <div class="BlogImage"><img src="../img/articleimg1.jpg" alt="Nope" class="col-md-4 col-sm-0"></div>
-                          <section class="ArticleTitle-expand col-md-8 col-sm-12 hidden-sm"><a href="">
-                                      <h2>Article Title 1</h2><small>Time</small></a>
-                            <div class="ArticleText-expand">
-                                      <p class="ArticleText"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, quos incidunt, illum quaerat amet in ad. Unde ipsum facilis itaque similique ad, accusamus voluptates, et veniam alias facere distinctio adipisci!  Lorem ipsum dolor sit amet, consectetur</p><a href="">READ POST <span class="glyphicon glyphicon-menu-right"></span></a>
-                            </div>
-                          </section>
-                          <div class="ArticleText-collapse visible-sm-block col-sm-12">
-                                    <p class="ArticleText"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, quos incidunt, illum quaerat amet in ad. Unde ipsum facilis itaque similique ad, accusamus voluptates, et veniam alias facere distinctio adipisci!  Lorem ipsum dolor sit amet, consectetur</p><a href="">READ POST <span class="glyphicon glyphicon-menu-right"></span></a>
-                          </div>
-                        </div>
-                      </article>
+              </article><?php endforeach;?>
             </div>
           </div>
         </div>

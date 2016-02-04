@@ -1,29 +1,3 @@
-mixin articleText(text)
-	p(class="ArticleText")= text
-	a(href="") READ POST 
-		span.glyphicon.glyphicon-menu-right
-
-mixin articleTitle(title, time)
-	h2= title
-	small= time
-
-
-mixin articleContent(blogImgSrc, title, time, bodyText)
-	article.Article
-		.row
-			section.ArticleTitle-collapse.col-sm-12.visible-sm-block
-				a(href="")
-					+articleTitle(title,time)
-			.BlogImage
-				img(src= blogImgSrc, alt="Nope").col-md-4.col-sm-0
-			section.ArticleTitle-expand.col-md-8.col-sm-12.hidden-sm
-				a(href="")
-					+articleTitle(title,time)
-				.ArticleText-expand
-					+articleText(bodyText)
-			.ArticleText-collapse.visible-sm-block.col-sm-12
-				+articleText(bodyText)
-
 div#blogSection
 	+linex("Blog")
 	+sectionHeader("Blog","Blog")
@@ -44,13 +18,11 @@ div#blogSection
 							h2 <?php echo $post[1];?>
 							small <?php echo time_elapsed_string($post[2]);?> 
 						.ArticleText-expand
-							p(class="ArticleText") <?php echo substr($post[3],0,330).'...';?>
+							p(class="ArticleText") <?php echo $post[5];?>
 							a(href!="<?php echo 'Blog/post.php?id='.$post[4];?>") READ POST
 								span.glyphicon.glyphicon-menu-right
 					.ArticleText-collapse.visible-sm-block.col-sm-12
-						p(class="ArticleText") <?php echo substr($post[3],0,330).'...';?>
+						p(class="ArticleText") <?php echo $post[5];?>
 						a(href!="<?php echo 'Blog/post.php?id='.$post[4];?>") READ POST 
 							span.glyphicon.glyphicon-menu-right
-			hr
 			<?php endforeach;?>
-			+articleContent("../img/articleimg1.jpg","Article Title 1", "Time", " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, quos incidunt, illum quaerat amet in ad. Unde ipsum facilis itaque similique ad, accusamus voluptates, et veniam alias facere distinctio adipisci!  Lorem ipsum dolor sit amet, consectetur")

@@ -35,7 +35,6 @@
             <li>Bootstrap / Neat</li>
             <li>PHP</li>
             <li>Version Control (GIT)</li>
-            <li>WordPress</li>
             <li>Java / C#</li>
           </ul>
           <ul class="col-md-4 col-sm-4">EXPERIENCE WITH
@@ -44,9 +43,10 @@
             <li>Adobe Illustrator</li>
           </ul>
           <ul class="col-md-3 col-sm-3">LEARNING
-            <li>Node.js</li>
+            <li>WordPress</li>
             <li>AJAX</li>
             <li>Ruby on Rails</li>
+            <li>Node.js</li>
           </ul>
         </div>
       </div>
